@@ -1,0 +1,8 @@
+{
+  "name": "AHORALAIA",
+  "description": "Una plataforma integral de noticias y análisis de IA con información en tiempo real, líneas de tiempo históricas y un directorio curado de divulgadores y herramientas de IA, impulsada por la API de Gemini.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
