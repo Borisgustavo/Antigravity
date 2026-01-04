@@ -7,12 +7,12 @@ const DirectoryPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'divulgadores' | 'fuentes'>('divulgadores');
 
   const filteredItems = DIRECTORY_MOCKS.filter(v => {
-    const matchesSearch = v.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                         v.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         v.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
+    const matchesSearch = v.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      v.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      v.category.toLowerCase().includes(searchTerm.toLowerCase());
+
     const matchesTab = activeTab === 'divulgadores' ? v.type === 'divulgador' : v.type === 'fuente_oficial';
-    
+
     return matchesSearch && matchesTab;
   });
 
@@ -77,10 +77,10 @@ const DirectoryPage: React.FC = () => {
     <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center">
       <main className="flex flex-1 flex-col items-center px-4 py-5 md:px-10 w-full">
         <div className="flex flex-col max-w-[1200px] w-full gap-8">
-          
+
           {/* Hero Search Section */}
           <div className="@container">
-            <div className="flex min-h-[320px] md:min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 md:p-12 relative overflow-hidden" style={{backgroundImage: 'linear-gradient(rgba(17, 20, 24, 0.7) 0%, rgba(17, 20, 24, 0.9) 100%), url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200")'}}>
+            <div className="flex min-h-[320px] md:min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 md:p-12 relative overflow-hidden" style={{ backgroundImage: 'linear-gradient(rgba(17, 20, 24, 0.7) 0%, rgba(17, 20, 24, 0.9) 100%), url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200")' }}>
               <div className="flex flex-col gap-3 text-center max-w-2xl z-10">
                 <h1 className="text-white text-3xl md:text-5xl font-black leading-tight tracking-[-0.033em] font-display">Hub de Conocimiento IA</h1>
                 <h2 className="text-gray-300 text-sm md:text-lg font-normal leading-relaxed">Divulgadores, rankings y fuentes oficiales para estar al día.</h2>
@@ -88,10 +88,10 @@ const DirectoryPage: React.FC = () => {
               <div className="w-full max-w-[560px] z-10 mt-4">
                 <label className="flex h-12 md:h-14 w-full items-center rounded-lg bg-[#1c2127] border border-[#3b4754] focus-within:border-primary transition-colors overflow-hidden pl-4 pr-1 shadow-2xl">
                   <span className="material-symbols-outlined text-[#9dabb9]">search</span>
-                  <input 
+                  <input
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="flex-1 bg-transparent border-none text-white px-3 focus:ring-0 placeholder:text-[#9dabb9]" 
+                    className="flex-1 bg-transparent border-none text-white px-3 focus:ring-0 placeholder:text-[#9dabb9]"
                     placeholder="Buscar recurso, blog o autor..."
                   />
                 </label>
@@ -101,13 +101,13 @@ const DirectoryPage: React.FC = () => {
 
           {/* Navigation Tabs */}
           <div className="flex border-b border-gray-200 dark:border-gray-800">
-            <button 
+            <button
               onClick={() => setActiveTab('divulgadores')}
               className={`px-8 py-4 font-bold text-sm transition-all border-b-2 ${activeTab === 'divulgadores' ? 'border-primary text-primary' : 'border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'}`}
             >
               Divulgadores (Personas)
             </button>
-            <button 
+            <button
               onClick={() => setActiveTab('fuentes')}
               className={`px-8 py-4 font-bold text-sm transition-all border-b-2 ${activeTab === 'fuentes' ? 'border-primary text-primary' : 'border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'}`}
             >
@@ -153,7 +153,7 @@ const DirectoryPage: React.FC = () => {
               </div>
               <div className="@container">
                 <div className="flex flex-col md:flex-row items-stretch rounded-xl bg-white dark:bg-[#1c2127] border border-gray-200 dark:border-[#283039] hover:border-primary/50 transition-all overflow-hidden shadow-lg group">
-                  <div className="w-full md:w-2/5 aspect-video md:aspect-auto bg-cover bg-center relative group-hover:scale-105 transition-transform duration-700" style={{backgroundImage: `url("${featured.imageUrl}")`}}>
+                  <div className="w-full md:w-2/5 aspect-video md:aspect-auto bg-cover bg-center relative group-hover:scale-105 transition-transform duration-700" style={{ backgroundImage: `url("${featured.imageUrl}")` }}>
                     <div className="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded tracking-tighter uppercase">{featured.tag}</div>
                   </div>
                   <div className="flex flex-col justify-center p-6 md:p-8 flex-1 gap-4">
@@ -165,7 +165,7 @@ const DirectoryPage: React.FC = () => {
                       {featured.description}
                     </p>
                     <div className="flex gap-4">
-                      <button 
+                      <button
                         onClick={() => handleVisit(featured.url)}
                         className="bg-primary hover:bg-blue-600 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-lg shadow-primary/20"
                       >
@@ -184,12 +184,12 @@ const DirectoryPage: React.FC = () => {
                 {activeTab === 'divulgadores' ? 'Voces Influyentes' : 'Documentación y Blogs de Referencia'}
               </h2>
             </div>
-            
+
             {filteredItems.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredItems.map(item => (
                   <div key={item.id} className="flex flex-col bg-white dark:bg-[#1c2127] rounded-xl overflow-hidden border border-gray-200 dark:border-[#283039] hover:border-primary/50 transition-all duration-200 group hover:-translate-y-1 shadow-sm">
-                    <div className="h-40 bg-cover bg-center relative transition-transform duration-700 group-hover:scale-110" style={{backgroundImage: `url("${item.imageUrl}")`}}>
+                    <div className="h-40 bg-cover bg-center relative transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url("${item.imageUrl}")` }}>
                       <div className={`absolute top-2 left-2 text-white text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-tighter ${item.type === 'fuente_oficial' ? 'bg-blue-600' : 'bg-primary/90'}`}>
                         {item.tag || item.category}
                       </div>
@@ -205,7 +205,25 @@ const DirectoryPage: React.FC = () => {
                       <p className="text-[#637588] dark:text-[#9dabb9] text-sm line-clamp-3 mb-2">
                         {item.description}
                       </p>
-                      <button 
+
+                      {/* Último vídeo section */}
+                      {item.latestVideo && (
+                        <div className="mb-4 bg-gray-50 dark:bg-[#151a21] border border-gray-100 dark:border-[#283039] rounded-lg p-3 group/video hover:border-red-500/30 transition-colors">
+                          <a href={item.latestVideo.url} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3">
+                            <div className="size-8 rounded-full bg-red-600 text-white flex items-center justify-center shrink-0 mt-0.5 group-hover/video:scale-110 transition-transform shadow-lg shadow-red-600/20">
+                              <span className="material-symbols-outlined text-[16px]">play_arrow</span>
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-[10px] uppercase font-black text-red-600 mb-0.5 tracking-wider">Último vídeo</p>
+                              <p className="text-xs font-bold text-gray-800 dark:text-gray-200 leading-tight line-clamp-2 group-hover/video:text-red-600 transition-colors">
+                                {item.latestVideo.title}
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                      )}
+
+                      <button
                         onClick={() => handleVisit(item.url)}
                         className="mt-auto text-primary text-xs font-bold flex items-center gap-1 group/link hover:underline"
                       >
@@ -224,8 +242,8 @@ const DirectoryPage: React.FC = () => {
             )}
           </section>
         </div>
-      </main>
-    </div>
+      </main >
+    </div >
   );
 };
 

@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -11,9 +11,9 @@ const Footer: React.FC = () => {
             <p className="text-gray-500 dark:text-[#9dabb9]">Recibe el resumen semanal de IA curado por expertos de AHORALAIA.</p>
           </div>
           <div className="w-full md:w-auto flex flex-col sm:flex-row gap-3">
-            <input 
-              className="bg-gray-100 dark:bg-[#283039] text-gray-900 dark:text-white px-4 py-3 rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-primary" 
-              placeholder="tu@email.com" 
+            <input
+              className="bg-gray-100 dark:bg-[#283039] text-gray-900 dark:text-white px-4 py-3 rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="tu@email.com"
               type="email"
             />
             <button className="bg-primary hover:bg-blue-600 text-white font-bold px-6 py-3 rounded-lg transition-colors whitespace-nowrap">
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
         <div className="mt-10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 dark:text-[#5d6b79] gap-4">
           <div className="flex gap-6">
             <a className="hover:text-gray-600 dark:hover:text-gray-300" href="#">Sobre AHORALAIA</a>
-            <a className="hover:text-gray-600 dark:hover:text-gray-300" href="#">Privacidad</a>
+            <Link className="hover:text-gray-600 dark:hover:text-gray-300" to="/terminos">Términos Legales</Link>
             <a className="hover:text-gray-600 dark:hover:text-gray-300" href="#">API</a>
           </div>
           <p>© 2024 AHORALAIA. Todos los derechos reservados.</p>

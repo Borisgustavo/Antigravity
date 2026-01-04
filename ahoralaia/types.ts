@@ -44,4 +44,9 @@ export interface DirectoryVoice {
   tag?: string;
   url?: string;
   type: 'divulgador' | 'fuente_oficial';
+  latestVideo?: {
+    title: string;
+    url: string;
+    uploadedAt?: string;
+  };
 }

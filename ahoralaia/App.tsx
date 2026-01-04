@@ -7,8 +7,10 @@ import TimelinePage from './pages/TimelinePage';
 import DirectoryPage from './pages/DirectoryPage';
 import CoursesPage from './pages/CoursesPage';
 import ComingSoonPage from './pages/ComingSoonPage';
+import TermsPage from './pages/TermsPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CookieConsent from './components/CookieConsent';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -32,9 +34,11 @@ const App: React.FC = () => {
             <Route path="/directory" element={<DirectoryPage />} />
             <Route path="/courses" element={<CoursesPage />} />
             <Route path="/proximamente" element={<ComingSoonPage />} />
+            <Route path="/terminos" element={<TermsPage />} />
           </Routes>
         </main>
         <Footer />
+        <CookieConsent />
       </div>
     </HashRouter>
   );

@@ -216,7 +216,11 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400',
     tag: 'REFERENTE',
     url: 'https://www.youtube.com/@DotCSV',
-    type: 'divulgador'
+    type: 'divulgador',
+    latestVideo: {
+      title: 'EXPECTATIVAS vs. REALIDAD: Analizando Mis Predicciones de IA 2025',
+      url: 'https://www.youtube.com/@DotCSV/streams'
+    }
   },
   {
     id: 'alejavirivera',
@@ -225,7 +229,11 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     category: 'YouTube',
     imageUrl: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80&w=400',
     url: 'https://www.youtube.com/@alejavirivera',
-    type: 'divulgador'
+    type: 'divulgador',
+    latestVideo: {
+      title: 'NotebookLM sorprende en navidad con 4 Bombas GRATIS: Esto puedes hacer ahora',
+      url: 'https://www.youtube.com/watch?v=0k7bJqK8Xj8' // Approximate ID or link to channel
+    }
   },
   {
     id: 'nicocmw',
@@ -234,7 +242,11 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     category: 'YouTube',
     imageUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=400',
     url: 'https://www.youtube.com/@nicocmw',
-    type: 'divulgador'
+    type: 'divulgador',
+    latestVideo: {
+      title: 'Cómo Crear Web en Minutos con IA (Tutorial de Gemini 3 + Vibe Coding)',
+      url: 'https://www.youtube.com/@nicocmw/videos'
+    }
   },
   {
     id: 'xaviermitjana',
@@ -243,7 +255,11 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     category: 'YouTube',
     imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400',
     url: 'https://www.youtube.com/@XavierMitjana',
-    type: 'divulgador'
+    type: 'divulgador',
+    latestVideo: {
+      title: 'GOOGLE turns GEMINI into the ULTIMATE ASSISTANT',
+      url: 'https://www.youtube.com/@XavierMitjana/videos'
+    }
   },
   {
     id: 'lainteligenciaartificial',
@@ -253,7 +269,11 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     category: 'YouTube',
     imageUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400',
     url: 'https://www.youtube.com/@la_inteligencia_artificial',
-    type: 'divulgador'
+    type: 'divulgador',
+    latestVideo: {
+      title: 'La IA va a CAMBIAR TODO: EMPLEO, RIESGOS y FUTURO | Jon Hernández & René ZZ',
+      url: 'https://www.youtube.com/@la_inteligencia_artificial/videos'
+    }
   },
   {
     id: 'donebylaura',
@@ -262,7 +282,11 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     category: 'YouTube',
     imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400',
     url: 'https://www.youtube.com/@donebyLaura',
-    type: 'divulgador'
+    type: 'divulgador',
+    latestVideo: {
+      title: 'Creo un canal de YouTube shorts con IA en 7 días',
+      url: 'https://www.youtube.com/watch?v=SCK7NrhZl7Y'
+    }
   },
   {
     id: 'miguebaenaia',
@@ -271,7 +295,11 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     category: 'YouTube',
     imageUrl: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=400',
     url: 'https://www.youtube.com/@MigueBaenaIA',
-    type: 'divulgador'
+    type: 'divulgador',
+    latestVideo: {
+      title: 'The 4 Gemini 3.0 features that are making people leave ChatGPT',
+      url: 'https://www.youtube.com/@MigueBaenaIA/videos'
+    }
   },
   {
     id: 'gustavoentrala',
@@ -280,7 +308,11 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     category: 'YouTube',
     imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400',
     url: 'https://www.youtube.com/@gustavo-entrala',
-    type: 'divulgador'
+    type: 'divulgador',
+    latestVideo: {
+      title: 'Brain-computer interfaces: the breakthrough that connects the brain with machines',
+      url: 'https://www.youtube.com/@gustavo-entrala/videos'
+    }
   },
   {
     id: 'edteam',
@@ -289,6 +321,10 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     category: 'YouTube',
     imageUrl: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=400',
     url: 'https://www.youtube.com/@EDteam',
-    type: 'divulgador'
+    type: 'divulgador',
+    latestVideo: {
+      title: '¿LA INTELIGENCIA ARTIFICIAL SUPERARÁ A LOS HUMANOS EN 2030?',
+      url: 'https://www.youtube.com/@EDteam/videos'
+    }
   }
 ];
