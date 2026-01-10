@@ -3,6 +3,66 @@ import { NewsItem, ToolItem, TimelineEvent, DirectoryVoice } from './types';
 
 export const NEWS_MOCKS: NewsItem[] = [
   {
+    id: 'ces-2026-physical-ai',
+    title: 'CES 2026: El auge de la "Physical AI" y los robots autónomos (LG CLOiD)',
+    excerpt: 'La IA salta del chat al mundo físico. LG presenta CLOiD y grandes tecnológicas apuestan por robots que ejecutan tareas domésticas y logísticas reales.',
+    category: 'Robotica',
+    source: 'CES 2026',
+    imageUrl: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-01-08',
+    externalUrl: 'https://www.ces.tech/'
+  },
+  {
+    id: 'openai-health-launch',
+    title: 'OpenAI lanza ChatGPT Health: Tu asistente médico personal conectado',
+    excerpt: 'Nueva función dedicada que conecta con Apple Health y portales de pacientes para explicar diagnósticos y monitorear signos vitales.',
+    category: 'Salud',
+    source: 'OpenAI',
+    imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-01-07',
+    externalUrl: 'https://openai.com/blog'
+  },
+  {
+    id: 'google-gemini-gmail',
+    title: 'Google integra Gemini 3 en Gmail con "AI Inbox" y respuestas contextuales',
+    excerpt: 'Gmail recibe su mayor actualización con Gemini 3: resumen de correos prioritarios, redacción automática y gestión inteligente del buzón.',
+    category: 'Productos',
+    source: 'Google Blog',
+    imageUrl: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-01-06',
+    externalUrl: 'https://blog.google/products/gmail/'
+  },
+  {
+    id: 'anthropic-ipo-valuation',
+    title: 'Anthropic busca valoración de US$350.000M y prepara posible salida a bolsa',
+    excerpt: 'Los creadores de Claude apuntan a una ronda histórica de inversión, consolidándose como el principal rival independiente de OpenAI.',
+    category: 'Negocios',
+    source: 'Financial Times',
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-01-05',
+    externalUrl: 'https://www.ft.com/'
+  },
+  {
+    id: 'meta-manus-ai',
+    title: 'Meta adquiere Manus AI para liderar la carrera de la "Agentic AI"',
+    excerpt: 'Zuckerberg redobla la apuesta por agentes autónomos capaces de operar software complejo, integrando la tecnología de Manus en Llama.',
+    category: 'Empresas',
+    source: 'TechCrunch',
+    imageUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-01-04',
+    externalUrl: 'https://techcrunch.com/'
+  },
+  {
+    id: 'nvidia-vera-rubin',
+    title: 'NVIDIA presenta plataforma "Vera Rubin" para agentes de IA física',
+    excerpt: 'Nueva arquitectura de chips y software diseñada específicamente para entrenar y desplegar robots y agentes de IA en el mundo real.',
+    category: 'Hardware',
+    source: 'NVIDIA Blog',
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-01-03',
+    externalUrl: 'https://nvidianews.nvidia.com/'
+  },
+  {
     id: 'openai-aws-deal',
     title: 'OpenAI firma acuerdo de nube con Amazon (AWS) por ~US$38.000M (7 años)',
     excerpt: 'OpenAI aseguró capacidad masiva de cómputo en AWS (incluyendo acceso a grandes volúmenes de GPUs) para escalar entrenamiento e inferencia a gran escala.',
@@ -18,7 +78,7 @@ export const NEWS_MOCKS: NewsItem[] = [
     excerpt: 'Actualización de la serie GPT-5 con mejoras de conversación/razonamiento y despliegue en ChatGPT (Instant/Thinking).',
     category: 'Modelos',
     source: 'OpenAI',
-    imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4628c9757?auto=format&fit=crop&q=80&w=1200',
+    imageUrl: 'https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&q=80&w=1200',
     publishedAt: '2025-11-12',
     externalUrl: 'https://openai.com/index/gpt-5-1/'
   },
@@ -231,8 +291,8 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@alejavirivera',
     type: 'divulgador',
     latestVideo: {
-      title: 'NotebookLM sorprende en navidad con 4 Bombas GRATIS: Esto puedes hacer ahora',
-      url: 'https://www.youtube.com/watch?v=0k7bJqK8Xj8' // Approximate ID or link to channel
+      title: 'Gemini 3 just blew out web animations! And this you can do',
+      url: 'https://www.youtube.com/@alejavirivera/videos'
     }
   },
   {
@@ -257,7 +317,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@XavierMitjana',
     type: 'divulgador',
     latestVideo: {
-      title: 'GOOGLE turns GEMINI into the ULTIMATE ASSISTANT',
+      title: 'I Cloned Tony Robbins\' Brain (NotebookLM Tutorial 2026)',
       url: 'https://www.youtube.com/@XavierMitjana/videos'
     }
   },
@@ -271,7 +331,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@la_inteligencia_artificial',
     type: 'divulgador',
     latestVideo: {
-      title: 'La IA va a CAMBIAR TODO: EMPLEO, RIESGOS y FUTURO | Jon Hernández & René ZZ',
+      title: 'El mayor error que están cometiendo empresas y gobiernos con la IA',
       url: 'https://www.youtube.com/@la_inteligencia_artificial/videos'
     }
   },
@@ -297,7 +357,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@MigueBaenaIA',
     type: 'divulgador',
     latestVideo: {
-      title: 'The 4 Gemini 3.0 features that are making people leave ChatGPT',
+      title: 'GPT-5 isn\'t worse: you\'re using it wrong (4 tricks that change the result)',
       url: 'https://www.youtube.com/@MigueBaenaIA/videos'
     }
   },
@@ -310,7 +370,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@gustavo-entrala',
     type: 'divulgador',
     latestVideo: {
-      title: 'Brain-computer interfaces: the breakthrough that connects the brain with machines',
+      title: 'The last lesson AI will learn before DOMINATING THE WORLD',
       url: 'https://www.youtube.com/@gustavo-entrala/videos'
     }
   },
@@ -323,7 +383,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@EDteam',
     type: 'divulgador',
     latestVideo: {
-      title: '¿LA INTELIGENCIA ARTIFICIAL SUPERARÁ A LOS HUMANOS EN 2030?',
+      title: 'El lenguaje que llevan 25 años eligiendo las grandes empresas',
       url: 'https://www.youtube.com/@EDteam/videos'
     }
   }

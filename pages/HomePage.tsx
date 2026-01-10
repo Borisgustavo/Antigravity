@@ -276,13 +276,7 @@ const HomePage: React.FC = () => {
               <p className="text-gray-900 dark:text-white text-sm md:text-base font-medium leading-normal flex-1 truncate">
                 {tickerText}
               </p>
-              <button
-                onClick={handleLiveRadar}
-                disabled={isSearching}
-                className="shrink-0 flex items-center gap-1 bg-primary text-white text-[10px] px-2 py-1 rounded font-bold hover:bg-blue-600 transition-colors"
-              >
-                {isSearching ? <span className="material-symbols-outlined text-xs animate-spin">sync</span> : 'ACTUALIZAR AHORALAIA'}
-              </button>
+
             </div>
           </div>
         </div>

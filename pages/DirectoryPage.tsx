@@ -5,6 +5,14 @@ import { DIRECTORY_MOCKS } from '../constants';
 const DirectoryPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState<'divulgadores' | 'fuentes'>('divulgadores');
+  const [contactMessage, setContactMessage] = useState('');
+  const MAX_CHARS = 300;
+
+  const handleSendMessage = () => {
+    const subject = encodeURIComponent("Consultas de AHORA la IA");
+    const body = encodeURIComponent(contactMessage);
+    window.location.href = `mailto:b.mejias15@gmail.com?subject=${subject}&body=${body}`;
+  };
 
   const filteredItems = DIRECTORY_MOCKS.filter(v => {
     const matchesSearch = v.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -242,6 +250,55 @@ const DirectoryPage: React.FC = () => {
             )}
           </section>
         </div>
+
+        {/* Contact Field Section */}
+        <section className="w-full max-w-[800px] mt-12 mb-8 animate-in fade-in duration-700">
+          <div className="bg-gradient-to-br from-[#1c2229] to-[#111418] p-8 rounded-2xl border border-gray-800 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors"></div>
+
+            <div className="flex flex-col gap-6 relative z-10">
+              <div className="flex flex-col gap-2 text-center md:text-left">
+                <h3 className="text-white text-2xl font-bold font-display flex items-center justify-center md:justify-start gap-3">
+                  <span className="material-symbols-outlined text-primary">mail</span>
+                  ¿Buscas algo más específico?
+                </h3>
+                <p className="text-gray-400 text-sm max-w-xl mx-auto md:mx-0">
+                  Si no encuentras lo que necesitas, cuéntanos brevemente y te ayudaremos a encontrar el recurso ideal.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <div className="relative">
+                  <textarea
+                    value={contactMessage}
+                    onChange={(e) => {
+                      if (e.target.value.length <= MAX_CHARS) {
+                        setContactMessage(e.target.value);
+                      }
+                    }}
+                    placeholder="Cuéntanos qué necesitas..."
+                    className="w-full bg-[#0b0e11] border border-gray-700 text-white rounded-xl p-4 min-h-[120px] focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none placeholder:text-gray-600 text-sm"
+                  />
+                  <span className={`absolute bottom-3 right-3 text-xs font-mono font-bold ${contactMessage.length >= MAX_CHARS ? 'text-red-500' : 'text-gray-600'}`}>
+                    {contactMessage.length}/{MAX_CHARS}
+                  </span>
+                </div>
+
+                <div className="flex justify-end">
+                  <button
+                    onClick={handleSendMessage}
+                    disabled={!contactMessage.trim()}
+                    className="bg-primary hover:bg-blue-600 disabled:bg-gray-800 disabled:text-gray-500 disabled:cursor-not-allowed text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg hover:shadow-primary/20 flex items-center gap-2"
+                  >
+                    Enviar Consulta
+                    <span className="material-symbols-outlined text-sm">send</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main >
     </div >
   );
