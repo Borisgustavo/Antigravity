@@ -22,6 +22,8 @@ export interface ToolItem {
   icon: string;
   url?: string;
   verified?: boolean;
+  bestFor?: string;
+  reason?: string;
 }
 
 export interface TimelineEvent {

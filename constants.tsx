@@ -3,66 +3,6 @@ import { NewsItem, ToolItem, TimelineEvent, DirectoryVoice } from './types';
 
 export const NEWS_MOCKS: NewsItem[] = [
   {
-    id: 'ces-2026-physical-ai',
-    title: 'CES 2026: El auge de la "Physical AI" y los robots autónomos (LG CLOiD)',
-    excerpt: 'La IA salta del chat al mundo físico. LG presenta CLOiD y grandes tecnológicas apuestan por robots que ejecutan tareas domésticas y logísticas reales.',
-    category: 'Robotica',
-    source: 'CES 2026',
-    imageUrl: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2026-01-08',
-    externalUrl: 'https://www.ces.tech/'
-  },
-  {
-    id: 'openai-health-launch',
-    title: 'OpenAI lanza ChatGPT Health: Tu asistente médico personal conectado',
-    excerpt: 'Nueva función dedicada que conecta con Apple Health y portales de pacientes para explicar diagnósticos y monitorear signos vitales.',
-    category: 'Salud',
-    source: 'OpenAI',
-    imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2026-01-07',
-    externalUrl: 'https://openai.com/blog'
-  },
-  {
-    id: 'google-gemini-gmail',
-    title: 'Google integra Gemini 3 en Gmail con "AI Inbox" y respuestas contextuales',
-    excerpt: 'Gmail recibe su mayor actualización con Gemini 3: resumen de correos prioritarios, redacción automática y gestión inteligente del buzón.',
-    category: 'Productos',
-    source: 'Google Blog',
-    imageUrl: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2026-01-06',
-    externalUrl: 'https://blog.google/products/gmail/'
-  },
-  {
-    id: 'anthropic-ipo-valuation',
-    title: 'Anthropic busca valoración de US$350.000M y prepara posible salida a bolsa',
-    excerpt: 'Los creadores de Claude apuntan a una ronda histórica de inversión, consolidándose como el principal rival independiente de OpenAI.',
-    category: 'Negocios',
-    source: 'Financial Times',
-    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2026-01-05',
-    externalUrl: 'https://www.ft.com/'
-  },
-  {
-    id: 'meta-manus-ai',
-    title: 'Meta adquiere Manus AI para liderar la carrera de la "Agentic AI"',
-    excerpt: 'Zuckerberg redobla la apuesta por agentes autónomos capaces de operar software complejo, integrando la tecnología de Manus en Llama.',
-    category: 'Empresas',
-    source: 'TechCrunch',
-    imageUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2026-01-04',
-    externalUrl: 'https://techcrunch.com/'
-  },
-  {
-    id: 'nvidia-vera-rubin',
-    title: 'NVIDIA presenta plataforma "Vera Rubin" para agentes de IA física',
-    excerpt: 'Nueva arquitectura de chips y software diseñada específicamente para entrenar y desplegar robots y agentes de IA en el mundo real.',
-    category: 'Hardware',
-    source: 'NVIDIA Blog',
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2026-01-03',
-    externalUrl: 'https://nvidianews.nvidia.com/'
-  },
-  {
     id: 'openai-aws-deal',
     title: 'OpenAI firma acuerdo de nube con Amazon (AWS) por ~US$38.000M (7 años)',
     excerpt: 'OpenAI aseguró capacidad masiva de cómputo en AWS (incluyendo acceso a grandes volúmenes de GPUs) para escalar entrenamiento e inferencia a gran escala.',
@@ -78,7 +18,7 @@ export const NEWS_MOCKS: NewsItem[] = [
     excerpt: 'Actualización de la serie GPT-5 con mejoras de conversación/razonamiento y despliegue en ChatGPT (Instant/Thinking).',
     category: 'Modelos',
     source: 'OpenAI',
-    imageUrl: 'https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&q=80&w=1200',
+    imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4628c9757?auto=format&fit=crop&q=80&w=1200',
     publishedAt: '2025-11-12',
     externalUrl: 'https://openai.com/index/gpt-5-1/'
   },
@@ -121,7 +61,7 @@ export const NEWS_MOCKS: NewsItem[] = [
     content: 'OpenAI publicó GPT-5.2 el 11 de diciembre de 2025, destacándolo como su modelo más capaz. Fue una respuesta directa a la presión competitiva, reforzando la carrera por modelos útiles para tareas reales como documentos largos y proyectos multipaso.',
     category: 'Modelos',
     source: 'OpenAI',
-    imageUrl: '/images/gpt-5-2-cover.png',
+    imageUrl: '/images/gpt-5-2-code-red.png',
     publishedAt: '2025-12-11',
     isFeatured: true,
     externalUrl: 'https://openai.com/index/introducing-gpt-5-2/'
@@ -279,7 +219,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     type: 'divulgador',
     latestVideo: {
       title: 'EXPECTATIVAS vs. REALIDAD: Analizando Mis Predicciones de IA 2025',
-      url: 'https://www.youtube.com/@DotCSV/streams'
+      url: 'https://www.youtube.com/@DotCSV/videos'
     }
   },
   {
@@ -291,7 +231,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@alejavirivera',
     type: 'divulgador',
     latestVideo: {
-      title: 'Gemini 3 just blew out web animations! And this you can do',
+      title: 'Gemini 3 just blew out web animations! And this you can do.',
       url: 'https://www.youtube.com/@alejavirivera/videos'
     }
   },
@@ -304,7 +244,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@nicocmw',
     type: 'divulgador',
     latestVideo: {
-      title: 'Cómo Crear Web en Minutos con IA (Tutorial de Gemini 3 + Vibe Coding)',
+      title: 'How to use Google AntiGravity better than 99% of people',
       url: 'https://www.youtube.com/@nicocmw/videos'
     }
   },
@@ -317,7 +257,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@XavierMitjana',
     type: 'divulgador',
     latestVideo: {
-      title: 'I Cloned Tony Robbins\' Brain (NotebookLM Tutorial 2026)',
+      title: 'Create presentations in 1 click Total control in NotebookLM',
       url: 'https://www.youtube.com/@XavierMitjana/videos'
     }
   },
@@ -331,7 +271,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@la_inteligencia_artificial',
     type: 'divulgador',
     latestVideo: {
-      title: 'El mayor error que están cometiendo empresas y gobiernos con la IA',
+      title: 'El mayor error que están cometiendo empresas y gobiernos con la IA – Líder global IA, Ernst & Young',
       url: 'https://www.youtube.com/@la_inteligencia_artificial/videos'
     }
   },
@@ -344,8 +284,8 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@donebyLaura',
     type: 'divulgador',
     latestVideo: {
-      title: 'Creo un canal de YouTube shorts con IA en 7 días',
-      url: 'https://www.youtube.com/watch?v=SCK7NrhZl7Y'
+      title: 'Intento crear un canal viral de YouTube Shorts con IA en 7 días',
+      url: 'https://www.youtube.com/@donebyLaura/videos'
     }
   },
   {
@@ -357,34 +297,92 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@MigueBaenaIA',
     type: 'divulgador',
     latestVideo: {
-      title: 'GPT-5 isn\'t worse: you\'re using it wrong (4 tricks that change the result)',
+      title: 'Are you still wasting time with complicated prompts?',
       url: 'https://www.youtube.com/@MigueBaenaIA/videos'
     }
   },
-  {
-    id: 'gustavoentrala',
-    name: 'Gustavo Entrala',
-    description: 'Estrategia y futuro. Ayuda a marcas y directivos a diseñar su futuro con IA. Análisis de tendencias, cultura de innovación y el impacto de los agentes de IA en los negocios.',
-    category: 'YouTube',
-    imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400',
-    url: 'https://www.youtube.com/@gustavo-entrala',
-    type: 'divulgador',
-    latestVideo: {
-      title: 'The last lesson AI will learn before DOMINATING THE WORLD',
-      url: 'https://www.youtube.com/@gustavo-entrala/videos'
+    {
+      id: 'gustavoentrala',
+      name: 'Gustavo Entrala',
+      description: 'Estrategia y futuro. Ayuda a marcas y directivos a diseñar su futuro con IA. Análisis de tendencias, cultura de innovación y el impacto de los agentes de IA en los negocios.',
+      category: 'YouTube',
+      imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400',
+      url: 'https://www.youtube.com/@gustavo-entrala',
+      type: 'divulgador',
+      latestVideo: {
+        title: 'Entrevista a Sam Altman',
+        url: 'https://www.youtube.com/@gustavo-entrala/videos'
+      }
+    },
+    {
+      id: 'ed-team',
+      name: 'EDteam',
+      description: 'Canal líder en educación de programación y tecnología en español.',
+      category: 'YouTube',
+      imageUrl: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=400',
+      url: 'https://www.youtube.com/@EDteam',
+      type: 'divulgador',
+      latestVideo: {
+        title: 'Último video de EDteam',
+        url: 'https://www.youtube.com/@EDteam/videos'
+      }
     }
-  },
-  {
-    id: 'edteam',
-    name: 'EDteam',
-    description: 'Educación en tecnología y programación. Cursos de IA, desarrollo web y backend con un enfoque directo: "No te detengas".',
-    category: 'YouTube',
-    imageUrl: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=400',
-    url: 'https://www.youtube.com/@EDteam',
-    type: 'divulgador',
-    latestVideo: {
-      title: 'El lenguaje que llevan 25 años eligiendo las grandes empresas',
-      url: 'https://www.youtube.com/@EDteam/videos'
+];
+
+export const VIDEO_TOOLS_RANKING: ToolItem[] = [
+    {
+        id: 'runway',
+        name: 'Runway',
+        category: 'Video Generativo',
+        icon: 'movie_filter',
+        url: 'https://runwayml.com/',
+        description: 'Suite creativa completa para generación y edición de video con IA.',
+        bestFor: 'text-to-video “cinematográfico” + edición/generación en un mismo flujo.',
+        reason: 'Suele liderar en calidad general y control creativo (modelos y herramientas de generación/edición).',
+        verified: true
+    },
+    {
+        id: 'adobe-firefly',
+        name: 'Adobe Firefly',
+        category: 'Video Comercial',
+        icon: 'brush',
+        url: 'https://www.adobe.com/products/firefly/features/ai-video-generator.html',
+        description: 'Generación de video integrada en el ecosistema Adobe.',
+        bestFor: 'contenido “comercial” y flujos con herramientas Adobe.',
+        reason: 'Enfoque fuerte en uso comercial y ecosistema Creative Cloud.',
+        verified: true
+    },
+    {
+        id: 'luma-dream-machine',
+        name: 'Luma Dream Machine',
+        category: 'Video Realista',
+        icon: 'auto_awesome',
+        url: 'https://lumalabs.ai/dream-machine',
+        description: 'Generador de video de alta calidad y rapidez.',
+        bestFor: 'videos realistas con movimiento “natural” desde texto/imagen.',
+        reason: 'Muy orientado a resultados cinematográficos y creación rápida en web/iOS.',
+        verified: true
+    },
+    {
+        id: 'pika',
+        name: 'Pika',
+        category: 'Video Social',
+        icon: 'animation',
+        url: 'https://pika.art/',
+        description: 'Plataforma ágil para creación de videos cortos.',
+        bestFor: 'clips rápidos para redes, efectos creativos y experimentación.',
+        reason: 'Plataforma “idea-to-video” muy ágil, con planes y funciones pensadas para creators.',
+        verified: true
+    },
+    {
+        id: 'synthesia',
+        name: 'Synthesia',
+        category: 'Avatares AI',
+        icon: 'person_pin',
+        url: 'https://www.synthesia.io/',
+        description: 'Generación de video con avatares para empresas.',
+        bestFor: 'videos con avatares (capacitaciones, onboarding, presentaciones) en muchos idiomas.',
+        reason: 'Fuerte en “texto → video” con avatares/locuciones para uso empresarial.',
+        verified: true
     }
-  }
 ];

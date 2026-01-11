@@ -1,0 +1,110 @@
+    title: 'IA Generativa para Todos',
+    description: 'La IA pasa de predecir a crear: chat, imagen, video. ChatGPT democratiza el acceso. Integración multimodal y agentes autónomos. Inicio de la regulación global a gran escala.',
+    category: 'Actualidad',
+    imageUrl: 'https://images.unsplash.com/photo-1678382156212-f1400266850d?auto=format&fit=crop&q=80&w=800',
+    icon: 'auto_awesome'
+  }
+];
+
+export const DIRECTORY_MOCKS: DirectoryVoice[] = [
+  {
+    id: 'dotcsv',
+    name: 'DotCSV',
+    realName: 'Carlos Santana Vega',
+    description: 'Considerado el principal divulgador de IA en español. Análisis profundo desde avances técnicos hasta impacto social.',
+    category: 'YouTube',
+    imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400',
+    tag: 'REFERENTE',
+    url: 'https://www.youtube.com/@DotCSV',
+    type: 'divulgador',
+    latestVideo: {
+      title: 'EXPECTATIVAS vs. REALIDAD: Analizando Mis Predicciones de IA 2025',
+      url: 'https://www.youtube.com/@DotCSV/videos'
+    }
+  },
+  {
+    id: 'alejavirivera',
+    name: 'Alejavi Rivera',
+    description: 'IA accesible de forma práctica y directa. Casos de uso reales y aplicaciones cotidianas para entender la tecnología sin tecnicismos complejos.',
+    category: 'YouTube',
+    imageUrl: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80&w=400',
+    url: 'https://www.youtube.com/@alejavirivera',
+    type: 'divulgador',
+    latestVideo: {
+      title: 'Gemini 3 just blew out web animations! And this you can do.',
+      url: 'https://www.youtube.com/@alejavirivera/videos'
+    }
+  },
+  {
+    id: 'nicocmw',
+    name: 'Nico CMW',
+    description: 'Expertise en automatización y agentes de IA. Tutoriales profundos sobre RAG, n8n y creación de sistemas autónomos para negocios y productividad.',
+    category: 'YouTube',
+    imageUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=400',
+    url: 'https://www.youtube.com/@nicocmw',
+    type: 'divulgador',
+    latestVideo: {
+      title: 'How to use Google AntiGravity better than 99% of people',
+      url: 'https://www.youtube.com/@nicocmw/videos'
+    }
+  },
+  {
+    id: 'xaviermitjana',
+    name: 'Xavier Mitjana',
+    description: 'Laboratorio de IA. Tutoriales, reviews y demostraciones de herramientas aplicadas a la creatividad, generación de vídeo y arte con inteligencia artificial.',
+    category: 'YouTube',
+    imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400',
+    url: 'https://www.youtube.com/@XavierMitjana',
+    type: 'divulgador',
+    latestVideo: {
+      title: 'Create presentations in 1 click Total control in NotebookLM',
+      url: 'https://www.youtube.com/@XavierMitjana/videos'
+    }
+  },
+  {
+    id: 'lainteligenciaartificial',
+    name: 'La Inteligencia Artificial',
+    realName: 'Jon Hernández',
+    description: 'Divulgación de IA y podcast con expertos. Análisis de herramientas y reflexiones profundas sobre el impacto de la tecnología en la sociedad y el trabajo.',
+    category: 'YouTube',
+    imageUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400',
+    url: 'https://www.youtube.com/@la_inteligencia_artificial',
+    type: 'divulgador',
+    latestVideo: {
+      title: 'El mayor error que están cometiendo empresas y gobiernos con la IA – Líder global IA, Ernst & Young',
+      url: 'https://www.youtube.com/@la_inteligencia_artificial/videos'
+    }
+  },
+  {
+    id: 'donebylaura',
+    name: 'Done by Laura',
+    description: 'Creatividad y herramientas de IA. Tutoriales sobre cómo viralizar contenido, uso de herramientas de video IA y trucos prácticos para creadores.',
+    category: 'YouTube',
+    imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400',
+    url: 'https://www.youtube.com/@donebyLaura',
+    type: 'divulgador',
+    latestVideo: {
+      title: 'Intento crear un canal viral de YouTube Shorts con IA en 7 días',
+      url: 'https://www.youtube.com/@donebyLaura/videos'
+    }
+  },
+  {
+    id: 'miguebaenaia',
+    name: 'Migue Baena IA',
+    description: 'Automatización con IA y servicios. Tutoriales sobre herramientas, creación de influencers virtuales y optimización de flujos de trabajo profesionales.',
+    category: 'YouTube',
+    imageUrl: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=400',
+    url: 'https://www.youtube.com/@MigueBaenaIA',
+    type: 'divulgador',
+    latestVideo: {
+      title: 'Are you still wasting time with complicated prompts?',
+      url: 'https://www.youtube.com/@MigueBaenaIA/videos'
+    }
+  },
+  {
+    id: 'gustavoentrala',
+    name: 'Gustavo Entrala',
+    description: 'Estrategia y futuro. Ayuda a marcas y directivos a diseñar su futuro con IA. Análisis de tendencias, cultura de innovación y el impacto de los agentes de IA en los negocios.',
+    category: 'YouTube',
+    imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400',
+    url: 'https://www.youtube.com/@gustavo-entrala',

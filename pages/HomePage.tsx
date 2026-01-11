@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { NEWS_MOCKS, TOOLS_MOCKS } from '../constants';
+import { NEWS_MOCKS, TOOLS_MOCKS, VIDEO_TOOLS_RANKING } from '../constants';
 import { getAITrendInsight, searchLiveNews } from '../services/geminiService';
 
 const HomePage: React.FC = () => {
@@ -417,42 +417,51 @@ const HomePage: React.FC = () => {
           <div className="w-full lg:w-[340px] flex flex-col gap-8 shrink-0">
             <div className="flex flex-col gap-6 bg-white dark:bg-[#1c2229] p-6 rounded-xl border border-gray-100 dark:border-[#283039] shadow-sm">
               <div className="flex items-center justify-between">
-                <h3 className="text-gray-900 dark:text-white font-bold font-display flex items-center gap-2">
-                  <span className="material-symbols-outlined text-yellow-500 fill-1">handyman</span>
-                  Herramientas curadas
+                <h3 className="text-gray-900 dark:text-white font-bold font-display flex items-center gap-2 text-lg leading-tight">
+                  <span className="material-symbols-outlined text-yellow-500 fill-1">movie_filter</span>
+                  Ranking (Top 5) Video IA
                 </h3>
               </div>
-              <p className="text-[10px] text-gray-400 -mt-3 italic">Mejores del mes basadas en changelogs oficiales</p>
+              <p className="text-[10px] text-gray-400 -mt-3 italic">Mejores herramientas para crear video con IA</p>
 
-              <div className="flex flex-col gap-4">
-                {TOOLS_MOCKS.map(tool => (
+              <div className="flex flex-col gap-5">
+                {VIDEO_TOOLS_RANKING.map((tool, index) => (
                   <div
                     key={tool.id}
                     onClick={() => handleVisitTool(tool.url)}
-                    className="flex gap-4 items-start group cursor-pointer p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-[#283039] transition-all border border-transparent hover:border-primary/20"
+                    className="flex gap-4 items-start group cursor-pointer p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-[#283039] transition-all border border-transparent hover:border-primary/20 bg-gray-50/50 dark:bg-[#20262e]"
                   >
-                    <div className="size-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500 group-hover:bg-yellow-500 group-hover:text-white transition-all shrink-0">
-                      <span className="material-symbols-outlined">{tool.icon}</span>
+                    <div className="mt-1 size-8 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500 group-hover:bg-yellow-500 group-hover:text-white transition-all shrink-0 font-bold text-sm">
+                      #{index + 1}
                     </div>
-                    <div className="flex-1 flex flex-col gap-0.5">
+                    <div className="flex-1 flex flex-col gap-2">
                       <div className="flex items-center justify-between">
                         <h4 className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">{tool.name}</h4>
                         {tool.verified && (
-                          <span className="material-symbols-outlined text-primary text-[14px] fill-1" title="Fuente Oficial Verificada">verified</span>
+                          <span className="material-symbols-outlined text-primary text-[14px] fill-1" title="Fuente Oficial">verified</span>
                         )}
                       </div>
-                      <p className="text-[10px] text-primary font-bold uppercase tracking-wider">{tool.category}</p>
-                      <p className="text-[11px] text-gray-500 leading-tight line-clamp-2">{tool.description}</p>
+
+                      <div className="flex flex-col gap-1.5 border-l-2 border-primary/20 pl-2">
+                        <p className="text-[10px] text-gray-500 leading-tight">
+                          <span className="text-primary font-bold uppercase tracking-wider text-[9px]">Mejor para:</span> <br />
+                          {tool.bestFor}
+                        </p>
+                        <p className="text-[10px] text-gray-500 leading-tight">
+                          <span className="text-primary font-bold uppercase tracking-wider text-[9px]">Por qué:</span> <br />
+                          {tool.reason}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
 
               <div className="mt-2 pt-4 border-t border-gray-100 dark:border-gray-800">
-                <button className="w-full py-2 bg-gray-100 dark:bg-[#283039] text-gray-600 dark:text-gray-300 text-[10px] font-bold rounded-lg hover:bg-gray-200 dark:hover:bg-[#3d4650] transition-colors flex items-center justify-center gap-2">
-                  VER RANKING DICIEMBRE 2026
-                  <span className="material-symbols-outlined text-[14px]">history_edu</span>
-                </button>
+                <div className="bg-red-500/10 text-red-400 p-3 rounded-lg text-[10px] leading-relaxed border border-red-500/20">
+                  <strong className="block mb-1 text-red-500 uppercase tracking-widest font-black">Nota de Seguridad:</strong>
+                  Hay campañas con sitios falsos que imitan herramientas de video IA; entra siempre por el dominio oficial.
+                </div>
               </div>
             </div>
           </div>

@@ -1,0 +1,11 @@
+
+import { NewsItem, ToolItem, TimelineEvent, DirectoryVoice } from './types';
+
+export const NEWS_MOCKS: NewsItem[] = [
+  {
+    id: 'openai-aws-deal',
+    title: 'OpenAI firma acuerdo de nube con Amazon (AWS) por ~US$38.000M (7 años)',
+    excerpt: 'OpenAI aseguró capacidad masiva de cómputo en AWS (incluyendo acceso a grandes volúmenes de GPUs) para escalar entrenamiento e inferencia a gran escala.',
+    category: 'Empresas',
+    source: 'Reuters',
+    imageUrl: 'https://images.unsplas
