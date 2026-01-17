@@ -260,7 +260,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="layout-container flex flex-col items-center py-5">
-      <div className="layout-content-container flex flex-col max-w-[1200px] flex-1 px-4 md:px-10">
+      <div className="layout-content-container flex flex-col max-w-[1200px] flex-1 px-4 md:px-10 w-full">
 
         {/* Breaking News Ticker */}
         <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mb-8">
