@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NEWS_MOCKS, TOOLS_MOCKS, VIDEO_TOOLS_RANKING } from '../constants';
 import { getAITrendInsight, searchLiveNews } from '../services/geminiService';
+import AdContainer from '../components/AdContainer';
 
 const HomePage: React.FC = () => {
   const [tickerText, setTickerText] = useState("Cargando pulso de IA...");
@@ -309,33 +310,55 @@ const HomePage: React.FC = () => {
         {/* Hero Grid */}
         {activeFilter === 'Todo' && (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 min-h-[400px]">
-            {/* BIG CARD: GPT-5.2 */}
-            <Link to="/article/openai-gpt-5-2" className="md:col-span-2 relative group overflow-hidden rounded-xl bg-[#1c2229]">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%), url("/images/gpt-5-2-cover.png")' }}></div>
-              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                <span className="bg-primary text-white text-xs font-bold px-2 py-1 rounded w-fit mb-3 uppercase tracking-wider">Destacado</span>
-                <h2 className="text-white font-display text-2xl md:text-4xl font-bold leading-tight mb-2">GPT-5.2: "Code Red" y la Nueva Era</h2>
-                <p className="text-gray-300 text-sm md:text-base line-clamp-2 max-w-xl">La respuesta de OpenAI: mejoras drásticas en contexto largo y agentes autónomos para trabajo real.</p>
-              </div>
-            </Link>
-            <div className="flex flex-col gap-4 h-full">
-              {/* SMALL CARD 1: Gemini 3 */}
-              <Link to="/article/google-gemini-3" className="flex-1 relative group overflow-hidden rounded-xl bg-[#1c2229]">
-                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%), url("https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=600")' }}></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-5">
-                  <span className="text-blue-300 text-xs font-bold mb-1 uppercase tracking-wider">Multimodal</span>
-                  <h3 className="text-white font-display text-lg font-bold leading-tight">Google lanza Gemini 3</h3>
-                </div>
-              </Link>
-              {/* SMALL CARD 2: NVIDIA (Kept as context) */}
-              <div className="flex-1 relative group overflow-hidden rounded-xl bg-[#1c2229]">
-                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%), url("https://images.unsplash.com/photo-1591453089816-0fbb971b454c?auto=format&fit=crop&q=80&w=600")' }}></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-5">
-                  <span className="text-green-400 text-xs font-bold mb-1 uppercase tracking-wider">Hardware</span>
-                  <h3 className="text-white font-display text-lg font-bold leading-tight">NVIDIA Blackwell: El futuro ya está aquí</h3>
-                </div>
-              </div>
-            </div>
+            {/* BIG CARD: Dynamic Featured */}
+            {(() => {
+              const featuredNews = NEWS_MOCKS.find(n => n.isFeatured) || NEWS_MOCKS[0];
+              const sideNews = NEWS_MOCKS.filter(n => n.id !== featuredNews.id).slice(0, 2);
+
+              return (
+                <>
+                  <Link to={featuredNews.externalUrl ? undefined : `/article/${featuredNews.id}`}
+                    onClick={() => featuredNews.externalUrl && window.open(featuredNews.externalUrl, '_blank')}
+                    className="md:col-span-2 relative group overflow-hidden rounded-xl bg-[#1c2229] cursor-pointer block h-full min-h-[300px]">
+                    <div className="absolute inset-0">
+                      <img
+                        src={featuredNews.imageUrl}
+                        alt={featuredNews.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                    </div>
+                    <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 z-10">
+                      <span className="bg-primary text-white text-xs font-bold px-2 py-1 rounded w-fit mb-3 uppercase tracking-wider">Destacado</span>
+                      <h2 className="text-white font-display text-2xl md:text-4xl font-bold leading-tight mb-2 drop-shadow-lg">{featuredNews.title}</h2>
+                      <p className="text-gray-200 text-sm md:text-base line-clamp-2 max-w-xl drop-shadow-md">{featuredNews.excerpt}</p>
+                    </div>
+                  </Link>
+
+                  <div className="flex flex-col gap-4 h-full">
+                    {sideNews.map((news) => (
+                      <Link key={news.id}
+                        to={news.externalUrl ? undefined : `/article/${news.id}`}
+                        onClick={() => news.externalUrl && window.open(news.externalUrl, '_blank')}
+                        className="flex-1 relative group overflow-hidden rounded-xl bg-[#1c2229] cursor-pointer block h-full min-h-[190px]">
+                        <div className="absolute inset-0">
+                          <img
+                            src={news.imageUrl}
+                            alt={news.title}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                        </div>
+                        <div className="absolute inset-0 flex flex-col justify-end p-5 z-10">
+                          <span className="text-blue-300 text-xs font-bold mb-1 uppercase tracking-wider drop-shadow-md">{news.category}</span>
+                          <h3 className="text-white font-display text-lg font-bold leading-tight drop-shadow-lg">{news.title}</h3>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              );
+            })()}
           </div>
         )}
 
@@ -415,6 +438,8 @@ const HomePage: React.FC = () => {
 
           {/* Sidebar */}
           <div className="w-full lg:w-[340px] flex flex-col gap-8 shrink-0">
+            <AdContainer slotId="sidebar-top" className="mb-6" label="Publicidad Sidebar" />
+
             <div className="flex flex-col gap-6 bg-white dark:bg-[#1c2229] p-6 rounded-xl border border-gray-100 dark:border-[#283039] shadow-sm">
               <div className="flex items-center justify-between">
                 <h3 className="text-gray-900 dark:text-white font-bold font-display flex items-center gap-2 text-lg leading-tight">
@@ -467,7 +492,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

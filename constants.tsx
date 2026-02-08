@@ -3,110 +3,76 @@ import { NewsItem, ToolItem, TimelineEvent, DirectoryVoice } from './types';
 
 export const NEWS_MOCKS: NewsItem[] = [
   {
-    id: 'openai-aws-deal',
-    title: 'OpenAI firma acuerdo de nube con Amazon (AWS) por ~US$38.000M (7 años)',
-    excerpt: 'OpenAI aseguró capacidad masiva de cómputo en AWS (incluyendo acceso a grandes volúmenes de GPUs) para escalar entrenamiento e inferencia a gran escala.',
-    category: 'Empresas',
-    source: 'Reuters',
-    imageUrl: 'https://images.unsplash.com/photo-1591453089816-0fbb971b454c?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2025-11-03',
-    externalUrl: 'https://www.reuters.com/business/retail-consumer/openai-amazon-strike-38-billion-agreement-chatgpt-maker-use-aws-2025-11-03/'
-  },
-  {
-    id: 'gpt-5-1',
-    title: 'OpenAI lanza GPT-5.1 (upgrade de ChatGPT)',
-    excerpt: 'Actualización de la serie GPT-5 con mejoras de conversación/razonamiento y despliegue en ChatGPT (Instant/Thinking).',
+    id: 'claude-opus-4-6',
+    title: 'Anthropic lanza Claude Opus 4.6 con "Agent Teams" y contexto de 1M',
+    excerpt: 'Nueva versión insignia con 1 millón de tokens de contexto, capacidad de codificación superior y orquestación de equipos de agentes.',
+    content: 'Anthropic presentó Claude Opus 4.6 el 5 de febrero de 2026. Este modelo redefine la colaboración hombre-IA con su capacidad de gestionar "equipos de agentes" especializados y un contexto masivo, superando a GPT-5.2 en benchmarks clave de codificación y razonamiento complejo.',
     category: 'Modelos',
-    source: 'OpenAI',
-    imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4628c9757?auto=format&fit=crop&q=80&w=1200',
-    publishedAt: '2025-11-12',
-    externalUrl: 'https://openai.com/index/gpt-5-1/'
-  },
-  {
-    id: 'anthropic-espionage',
-    title: 'Anthropic revela y "disrumpe" campaña de ciberespionaje altamente automatizada con IA',
-    excerpt: 'Anthropic publicó un análisis donde afirma que atacantes usaron capacidades "agentic" para ejecutar gran parte de una campaña de intrusión de forma inusualmente autónoma.',
-    category: 'Seguridad',
     source: 'Anthropic',
+    imageUrl: 'https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&q=80&w=1200',
+    publishedAt: '2026-02-05',
+    isFeatured: true,
+    externalUrl: 'https://www.anthropic.com/news'
+  },
+  {
+    id: 'gpt-5-3-codex',
+    title: 'OpenAI responde con GPT-5.3 Codex: El primer modelo nativo para agentes de código',
+    excerpt: 'Diseñado específicamente para ingeniería de software autónoma, GPT-5.3 Codex promete un 25% más de velocidad y capacidades de depuración automática.',
+    category: 'Modelos',
+    source: 'OpenAI',
     imageUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2025-11-13',
-    externalUrl: 'https://www.anthropic.com/news/disrupting-AI-espionage'
+    publishedAt: '2026-02-05',
+    externalUrl: 'https://openai.com/index/gpt-5-3-codex/'
   },
   {
-    id: 'google-gemini-3',
-    title: 'Google presenta Gemini 3 (modelo más avanzado de su familia)',
-    excerpt: 'Google anunció Gemini 3 y su disponibilidad en productos (Gemini app/AI Studio/Vertex AI), reforzando el salto en razonamiento y multimodalidad.',
-    content: 'Google presentó Gemini 3 el 18 de noviembre de 2025. Se consolida como el motor transversal de todo el ecosistema (consumo, enterprise, dev), elevando el estándar competitivo en modelos de propósito general.',
+    id: 'deepseek-r1',
+    title: 'DeepSeek R1 sacude la industria: Razonamiento de nivel GPT a una fracción del costo',
+    excerpt: 'El modelo chino demuestra que la eficiencia es el nuevo campo de batalla, igualando el rendimiento de modelos occidentales en matemáticas y código con mucha menos computación.',
     category: 'Modelos',
-    source: 'blog.google',
-    imageUrl: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=1200',
-    publishedAt: '2025-11-18',
-    isFeatured: true,
-    externalUrl: 'https://blog.google/products/gemini/gemini-3/'
+    source: 'DeepSeek',
+    imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-01-20',
+    externalUrl: 'https://www.deepseek.com/'
   },
   {
-    id: 'anthropic-azure-deal',
-    title: 'Microsoft y Nvidia anuncian inversión en Anthropic + compromiso de ~US$30.000M en Azure',
-    excerpt: 'Acuerdo estratégico para escalar Claude en Azure, con inversión planificada de Microsoft/Nvidia y un gran compromiso de compra de cómputo por parte de Anthropic.',
+    id: 'google-commerce-protocol',
+    title: 'Google lanza Universal Commerce Protocol para agentes de compras autónomos',
+    excerpt: 'Google transforma la búsqueda en una capa de ejecución para el comercio, permitiendo que agentes de IA completen compras de principio a fin.',
     category: 'Empresas',
-    source: 'Reuters',
-    imageUrl: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2025-11-18',
-    externalUrl: 'https://www.reuters.com/technology/anthropic-commits-30-billion-microsoft-azure-compute-2025-11-18/'
+    source: 'Google',
+    imageUrl: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-01-15',
+    externalUrl: 'https://blog.google/products/shopping/'
   },
   {
-    id: 'openai-gpt-5-2',
-    title: 'OpenAI lanza GPT-5.2 (modelo "frontier" para trabajo profesional y agentes)',
-    excerpt: 'OpenAI presentó GPT-5.2 como su modelo más avanzado para tareas profesionales y agentes de larga duración.',
-    content: 'OpenAI publicó GPT-5.2 el 11 de diciembre de 2025, destacándolo como su modelo más capaz. Fue una respuesta directa a la presión competitiva, reforzando la carrera por modelos útiles para tareas reales como documentos largos y proyectos multipaso.',
+    id: 'gemini-personal-intelligence',
+    title: 'Gemini ahora se integra profundamente con tus apps de Google (Gmail, Fotos, YouTube)',
+    excerpt: 'Nueva actualización "Personal Intelligence" permite a Gemini conectar puntos entre tus datos personales de forma segura para una asistencia ultra-personalizada.',
     category: 'Modelos',
-    source: 'OpenAI',
-    imageUrl: '/images/gpt-5-2-code-red.png',
-    publishedAt: '2025-12-11',
-    isFeatured: true,
-    externalUrl: 'https://openai.com/index/introducing-gpt-5-2/'
-  },
-  {
-    id: 'gemini-3-flash',
-    title: 'Google lanza Gemini 3 Flash y lo vuelve modelo por defecto en la app',
-    excerpt: 'Google amplió la familia Gemini 3 con Flash (optimizado en velocidad/costo) y lo puso como default en Gemini.',
-    category: 'Modelos',
-    source: 'blog.google',
+    source: 'Google',
     imageUrl: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=1200',
-    publishedAt: '2025-12-17',
-    externalUrl: 'https://blog.google/products/gemini/gemini-3-flash/'
+    publishedAt: '2026-01-10',
+    externalUrl: 'https://blog.google/products/gemini/'
   },
   {
-    id: 'gpt-5-2-codex',
-    title: 'OpenAI lanza GPT-5.2-Codex (enfocado en ingeniería de software y ciberseguridad defensiva)',
-    excerpt: 'Un modelo Codex más capaz y "agentic" para trabajo de programación de mayor alcance, con énfasis en seguridad.',
-    category: 'Modelos',
-    source: 'OpenAI',
-    imageUrl: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2025-12-18',
-    externalUrl: 'https://openai.com/index/introducing-gpt-5-2-codex/'
+    id: 'snowflake-openai',
+    title: 'Snowflake y OpenAI firman alianza de US$200M para llevar IA a los datos empresariales',
+    excerpt: 'Acuerdo estratégico para integrar modelos de OpenAI directamente en la nube de datos de Snowflake, facilitando la creación de apps corporativas seguras.',
+    category: 'Empresas',
+    source: 'Snowflake',
+    imageUrl: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-02-02',
+    externalUrl: 'https://www.snowflake.com/blog/'
   },
   {
-    id: 'openai-teen-protection',
-    title: 'OpenAI refuerza protección para menores y avanza en "age prediction"',
-    excerpt: 'OpenAI actualizó su Model Spec con principios U18; en paralelo se reportaron medidas para predecir/identificar usuarios menores y aplicar salvaguardas.',
-    category: 'Regulación',
-    source: 'OpenAI',
-    imageUrl: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2025-12-18',
-    externalUrl: 'https://openai.com/index/updating-model-spec-with-teen-protections/'
-  },
-  {
-    id: 'nvidia-groq-deal',
-    title: 'Nvidia firma acuerdo de licenciamiento con Groq y contrata talento clave (inferencia)',
-    excerpt: 'Movimiento estratégico hacia inferencia (no adquisición total), con licenciamiento no exclusivo y fichaje de ejecutivos/ingenieros de Groq.',
-    content: 'NVIDIA acordó un licenciamiento no exclusivo de la tecnología de Groq para acelerar inferencias de IA. Jonathan Ross y varios ingenieros clave pasan a las filas de NVIDIA, valorando la escala del talento en unos $20.000 millones.',
-    category: 'Hardware',
-    source: 'Business Insider',
-    imageUrl: 'https://images.unsplash.com/photo-1591453089816-0fbb971b454c?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2025-12-25',
-    isFeatured: true,
-    externalUrl: 'https://www.businessinsider.com/nvidia-reaches-licensing-agreement-with-groq-hires-ai-top-talent-2025-12'
+    id: 'chatgpt-ads-go',
+    title: 'ChatGPT introduce publicidad y nuevo plan "Go" de US$8/mes',
+    excerpt: 'OpenAI diversifica sus ingresos con un nivel intermedio más económico y la introducción de anuncios en los planes gratuitos.',
+    category: 'Empresas',
+    source: 'The Verge',
+    imageUrl: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-01-12',
+    externalUrl: 'https://www.theverge.com/'
   }
 ];
 
@@ -244,7 +210,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@nicocmw',
     type: 'divulgador',
     latestVideo: {
-      title: 'How to use Google AntiGravity better than 99% of people',
+      title: 'Tutorial DeepSeek R1: Crea tu propio Agente Local 100% Privado',
       url: 'https://www.youtube.com/@nicocmw/videos'
     }
   },
@@ -257,7 +223,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@XavierMitjana',
     type: 'divulgador',
     latestVideo: {
-      title: 'Create presentations in 1 click Total control in NotebookLM',
+      title: 'Probando Sora 2: ¿Adiós a los actores reales? Análisis completo',
       url: 'https://www.youtube.com/@XavierMitjana/videos'
     }
   },
@@ -271,7 +237,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@la_inteligencia_artificial',
     type: 'divulgador',
     latestVideo: {
-      title: 'El mayor error que están cometiendo empresas y gobiernos con la IA – Líder global IA, Ernst & Young',
+      title: 'El Futuro del Trabajo en 2026: Informe Exclusivo de OpenAI',
       url: 'https://www.youtube.com/@la_inteligencia_artificial/videos'
     }
   },
@@ -284,7 +250,7 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@donebyLaura',
     type: 'divulgador',
     latestVideo: {
-      title: 'Intento crear un canal viral de YouTube Shorts con IA en 7 días',
+      title: 'Cómo crear contenido automático con GPT-5.3 (Flujo 1 clic)',
       url: 'https://www.youtube.com/@donebyLaura/videos'
     }
   },
@@ -297,92 +263,92 @@ export const DIRECTORY_MOCKS: DirectoryVoice[] = [
     url: 'https://www.youtube.com/@MigueBaenaIA',
     type: 'divulgador',
     latestVideo: {
-      title: 'Are you still wasting time with complicated prompts?',
+      title: 'Agentes Autónomos: Automatiza tu Agencia en 2026',
       url: 'https://www.youtube.com/@MigueBaenaIA/videos'
     }
   },
-    {
-      id: 'gustavoentrala',
-      name: 'Gustavo Entrala',
-      description: 'Estrategia y futuro. Ayuda a marcas y directivos a diseñar su futuro con IA. Análisis de tendencias, cultura de innovación y el impacto de los agentes de IA en los negocios.',
-      category: 'YouTube',
-      imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400',
-      url: 'https://www.youtube.com/@gustavo-entrala',
-      type: 'divulgador',
-      latestVideo: {
-        title: 'Entrevista a Sam Altman',
-        url: 'https://www.youtube.com/@gustavo-entrala/videos'
-      }
-    },
-    {
-      id: 'ed-team',
-      name: 'EDteam',
-      description: 'Canal líder en educación de programación y tecnología en español.',
-      category: 'YouTube',
-      imageUrl: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=400',
-      url: 'https://www.youtube.com/@EDteam',
-      type: 'divulgador',
-      latestVideo: {
-        title: 'Último video de EDteam',
-        url: 'https://www.youtube.com/@EDteam/videos'
-      }
+  {
+    id: 'gustavoentrala',
+    name: 'Gustavo Entrala',
+    description: 'Estrategia y futuro. Ayuda a marcas y directivos a diseñar su futuro con IA. Análisis de tendencias, cultura de innovación y el impacto de los agentes de IA en los negocios.',
+    category: 'YouTube',
+    imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400',
+    url: 'https://www.youtube.com/@gustavo-entrala',
+    type: 'divulgador',
+    latestVideo: {
+      title: 'Apple Intelligence: La verdadera revolución silenciosa (iPhone 17)',
+      url: 'https://www.youtube.com/@gustavo-entrala/videos'
     }
+  },
+  {
+    id: 'ed-team',
+    name: 'EDteam',
+    description: 'Canal líder en educación de programación y tecnología en español.',
+    category: 'YouTube',
+    imageUrl: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=400',
+    url: 'https://www.youtube.com/@EDteam',
+    type: 'divulgador',
+    latestVideo: {
+      title: '¿Por qué NO debes aprender Prompt Engineering en 2026?',
+      url: 'https://www.youtube.com/@EDteam/videos'
+    }
+  }
 ];
 
 export const VIDEO_TOOLS_RANKING: ToolItem[] = [
-    {
-        id: 'runway',
-        name: 'Runway',
-        category: 'Video Generativo',
-        icon: 'movie_filter',
-        url: 'https://runwayml.com/',
-        description: 'Suite creativa completa para generación y edición de video con IA.',
-        bestFor: 'text-to-video “cinematográfico” + edición/generación en un mismo flujo.',
-        reason: 'Suele liderar en calidad general y control creativo (modelos y herramientas de generación/edición).',
-        verified: true
-    },
-    {
-        id: 'adobe-firefly',
-        name: 'Adobe Firefly',
-        category: 'Video Comercial',
-        icon: 'brush',
-        url: 'https://www.adobe.com/products/firefly/features/ai-video-generator.html',
-        description: 'Generación de video integrada en el ecosistema Adobe.',
-        bestFor: 'contenido “comercial” y flujos con herramientas Adobe.',
-        reason: 'Enfoque fuerte en uso comercial y ecosistema Creative Cloud.',
-        verified: true
-    },
-    {
-        id: 'luma-dream-machine',
-        name: 'Luma Dream Machine',
-        category: 'Video Realista',
-        icon: 'auto_awesome',
-        url: 'https://lumalabs.ai/dream-machine',
-        description: 'Generador de video de alta calidad y rapidez.',
-        bestFor: 'videos realistas con movimiento “natural” desde texto/imagen.',
-        reason: 'Muy orientado a resultados cinematográficos y creación rápida en web/iOS.',
-        verified: true
-    },
-    {
-        id: 'pika',
-        name: 'Pika',
-        category: 'Video Social',
-        icon: 'animation',
-        url: 'https://pika.art/',
-        description: 'Plataforma ágil para creación de videos cortos.',
-        bestFor: 'clips rápidos para redes, efectos creativos y experimentación.',
-        reason: 'Plataforma “idea-to-video” muy ágil, con planes y funciones pensadas para creators.',
-        verified: true
-    },
-    {
-        id: 'synthesia',
-        name: 'Synthesia',
-        category: 'Avatares AI',
-        icon: 'person_pin',
-        url: 'https://www.synthesia.io/',
-        description: 'Generación de video con avatares para empresas.',
-        bestFor: 'videos con avatares (capacitaciones, onboarding, presentaciones) en muchos idiomas.',
-        reason: 'Fuerte en “texto → video” con avatares/locuciones para uso empresarial.',
-        verified: true
-    }
+  {
+    id: 'runway',
+    name: 'Runway',
+    category: 'Video Generativo',
+    icon: 'movie_filter',
+    url: 'https://runwayml.com/',
+    description: 'Suite creativa completa para generación y edición de video con IA.',
+    bestFor: 'text-to-video “cinematográfico” + edición/generación en un mismo flujo.',
+    reason: 'Suele liderar en calidad general y control creativo (modelos y herramientas de generación/edición).',
+    verified: true
+  },
+  {
+    id: 'adobe-firefly',
+    name: 'Adobe Firefly',
+    category: 'Video Comercial',
+    icon: 'brush',
+    url: 'https://www.adobe.com/products/firefly/features/ai-video-generator.html',
+    description: 'Generación de video integrada en el ecosistema Adobe.',
+    bestFor: 'contenido “comercial” y flujos con herramientas Adobe.',
+    reason: 'Enfoque fuerte en uso comercial y ecosistema Creative Cloud.',
+    verified: true
+  },
+  {
+    id: 'luma-dream-machine',
+    name: 'Luma Dream Machine',
+    category: 'Video Realista',
+    icon: 'auto_awesome',
+    url: 'https://lumalabs.ai/dream-machine',
+    description: 'Generador de video de alta calidad y rapidez.',
+    bestFor: 'videos realistas con movimiento “natural” desde texto/imagen.',
+    reason: 'Muy orientado a resultados cinematográficos y creación rápida en web/iOS.',
+    verified: true
+  },
+  {
+    id: 'pika',
+    name: 'Pika',
+    category: 'Video Social',
+    icon: 'animation',
+    url: 'https://pika.art/',
+    description: 'Plataforma ágil para creación de videos cortos.',
+    bestFor: 'clips rápidos para redes, efectos creativos y experimentación.',
+    reason: 'Plataforma “idea-to-video” muy ágil, con planes y funciones pensadas para creators.',
+    verified: true
+  },
+  {
+    id: 'synthesia',
+    name: 'Synthesia',
+    category: 'Avatares AI',
+    icon: 'person_pin',
+    url: 'https://www.synthesia.io/',
+    description: 'Generación de video con avatares para empresas.',
+    bestFor: 'videos con avatares (capacitaciones, onboarding, presentaciones) en muchos idiomas.',
+    reason: 'Fuerte en “texto → video” con avatares/locuciones para uso empresarial.',
+    verified: true
+  }
 ];

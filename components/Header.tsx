@@ -51,9 +51,7 @@ const Header: React.FC = () => {
             />
           </div>
         </label>
-        <button className="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
-          <span className="truncate">Suscribirse</span>
-        </button>
+
 
         {/* Mobile Menu Button */}
         <button
@@ -104,9 +102,7 @@ const Header: React.FC = () => {
             >Cursos IA</Link>
           </nav>
 
-          <button className="sm:hidden w-full h-10 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold rounded-lg mt-2">
-            Suscribirse
-          </button>
+
         </div>
       )}
     </header>

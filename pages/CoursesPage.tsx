@@ -336,20 +336,35 @@ const CoursesPage: React.FC = () => {
             </section>
 
             {/* Call to Action */}
-            <section className="mt-32 p-12 bg-primary rounded-[2.5rem] text-center text-white relative overflow-hidden">
+            <section className="mt-32 p-12 bg-[#a435f0] rounded-[2.5rem] text-center text-white relative overflow-hidden shadow-2xl shadow-purple-900/20">
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
               <div className="relative z-10 flex flex-col items-center gap-6">
-                <span className="material-symbols-outlined text-[64px]">verified_user</span>
-                <h2 className="text-3xl md:text-4xl font-black font-display">¿Buscas algo más específico?</h2>
-                <p className="text-blue-100 max-w-xl">
-                  Nuestros analistas revisan nuevos programas cada semana. Suscríbete para recibir alertas de cursos premium gratuitos y becas.
+                <span className="material-symbols-outlined text-[64px]">search_check</span>
+                <h2 className="text-3xl md:text-4xl font-black font-display">Encuentra tu curso ideal en Udemy</h2>
+                <p className="text-purple-100 max-w-xl text-lg">
+                  ¿No encuentras lo que buscas? Explora el catálogo más grande del mundo con más de 200,000 cursos de IA, Python y Data Science.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full max-w-md">
-                  <input className="bg-white/10 border border-white/20 px-6 py-4 rounded-2xl w-full text-white placeholder:text-blue-200 outline-none focus:ring-2 focus:ring-white/50" placeholder="tu@email.com" />
-                  <button className="bg-white text-primary font-black px-8 py-4 rounded-2xl whitespace-nowrap hover:bg-blue-50 transition-colors">
-                    Unirme
+                <form
+                  action="https://www.udemy.com/courses/search/"
+                  method="get"
+                  target="_blank"
+                  className="flex flex-col sm:flex-row gap-4 mt-4 w-full max-w-2xl"
+                >
+                  <input type="hidden" name="src" value="ukw" />
+                  <div className="relative flex-1">
+                    <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+                    <input
+                      name="q"
+                      className="bg-white text-gray-900 border-2 border-transparent focus:border-white px-6 py-4 pl-12 rounded-2xl w-full placeholder:text-gray-400 outline-none font-medium shadow-lg"
+                      placeholder="Ej: Agentes IA, RAG, Python Avanzado..."
+                      required
+                    />
+                  </div>
+                  <button type="submit" className="bg-[#2d2f31] text-white font-black px-8 py-4 rounded-2xl whitespace-nowrap hover:bg-black transition-all hover:scale-105 shadow-xl flex items-center justify-center gap-2">
+                    Buscar en Udemy
+                    <span className="material-symbols-outlined text-[20px]">arrow_outward</span>
                   </button>
-                </div>
+                </form>
               </div>
             </section>
           </div>
