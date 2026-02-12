@@ -162,21 +162,21 @@ const CoursesPage: React.FC = () => {
   ];
 
   const udemyCourses = [
+    { title: "AI Engineer Agentic Track: The Complete Agent & MCP Course (EN)", link: "https://www.udemy.com/course/the-complete-agentic-ai-engineering-course/", rating: 4.9, students: "5k+" },
+    { title: "LangChain – Develop AI Agents with LangChain & LangGraph (EN)", link: "https://www.udemy.com/course/langchain/", rating: 4.8, students: "20k+" },
+    { title: "AI Engineer MLOps Track: Deploy Gen AI & Agentic AI at Scale (EN)", link: "https://www.udemy.com/course/generative-and-agentic-ai-in-production/", rating: 4.8, students: "8k+" },
+    { title: "AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents (EN)", link: "https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/", rating: 4.7, students: "10k+" },
+    { title: "Curso Completo de IA Generativa: ChatGPT, Midjourney y más! (ES)", link: "https://www.udemy.com/course/inteligencia-artificial-generativa-llms-chatgpt-dall-e-3/", rating: 4.7, students: "30k+" },
+    { title: "Master RAG: Building Intelligent RAG Systems [NEW] (EN)", link: "https://www.udemy.com/course/master-rag-building-intelligent-rag-systems/", rating: 4.7, students: "2k+" },
     { title: "The Data Science Course: Complete Data Science Bootcamp 2026 (EN)", link: "https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/", rating: 4.6, students: "500k+" },
     { title: "Machine Learning A-Z: AI, Python & R + ChatGPT Prize [2025] (EN)", link: "https://www.udemy.com/course/machinelearning/", rating: 4.6, students: "1M+" },
     { title: "Deep Learning A-Z 2025: Neural Networks, AI & ChatGPT Prize (EN)", link: "https://www.udemy.com/course/deeplearning/", rating: 4.6, students: "350k+" },
-    { title: "LangChain – Develop AI Agents with LangChain & LangGraph (EN)", link: "https://www.udemy.com/course/langchain/", rating: 4.8, students: "20k+" },
-    { title: "AI Engineer Agentic Track: The Complete Agent & MCP Course (EN)", link: "https://www.udemy.com/course/the-complete-agentic-ai-engineering-course/", rating: 4.9, students: "5k+" },
-    { title: "AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents (EN)", link: "https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/", rating: 4.7, students: "10k+" },
-    { title: "Artificial Intelligence A-Z 2025: Agentic AI, Gen AI, and RL (EN)", link: "https://www.udemy.com/course/artificial-intelligence-az/", rating: 4.4, students: "300k+" },
-    { title: "Complete Data Science, Machine Learning, DL, NLP Bootcamp (EN)", link: "https://www.udemy.com/course/complete-machine-learning-nlp-bootcamp-mlops-deployment/", rating: 4.5, students: "50k+" },
-    { title: "Curso Completo de IA Generativa: ChatGPT, Midjourney y más! (ES)", link: "https://www.udemy.com/course/inteligencia-artificial-generativa-llms-chatgpt-dall-e-3/", rating: 4.7, students: "30k+" },
     { title: "Python para Data Science & Machine Learning en 18 Días (ES)", link: "https://www.udemy.com/course/python-para-data-science/", rating: 4.6, students: "40k+" },
     { title: "Inteligencia Artificial y Deep Learning desde cero en Python (ES)", link: "https://www.udemy.com/course/deep-learning-desde-cero-en-python/", rating: 4.6, students: "25k+" },
     { title: "Machine Learning de A a la Z: R y Python para Data Science (ES)", link: "https://www.udemy.com/course/machinelearning-es/", rating: 4.6, students: "60k+" },
-    { title: "AI Engineer MLOps Track: Deploy Gen AI & Agentic AI at Scale (EN)", link: "https://www.udemy.com/course/generative-and-agentic-ai-in-production/", rating: 4.8, students: "8k+" },
-    { title: "Master RAG: Building Intelligent RAG Systems [NEW] (EN)", link: "https://www.udemy.com/course/master-rag-building-intelligent-rag-systems/", rating: 4.7, students: "2k+" },
-    { title: "LLM & Generative AI Masterclass: Langchain, HuggingFace (EN)", link: "https://www.udemy.com/course/complete-natural-language-processing-nlp-with-spacy-nltk/", rating: 4.5, students: "15k+" }
+    { title: "Complete Data Science, Machine Learning, DL, NLP Bootcamp (EN)", link: "https://www.udemy.com/course/complete-machine-learning-nlp-bootcamp-mlops-deployment/", rating: 4.5, students: "50k+" },
+    { title: "LLM & Generative AI Masterclass: Langchain, HuggingFace (EN)", link: "https://www.udemy.com/course/complete-natural-language-processing-nlp-with-spacy-nltk/", rating: 4.5, students: "15k+" },
+    { title: "Artificial Intelligence A-Z 2025: Agentic AI, Gen AI, and RL (EN)", link: "https://www.udemy.com/course/artificial-intelligence-az/", rating: 4.4, students: "300k+" }
   ];
 
   return (

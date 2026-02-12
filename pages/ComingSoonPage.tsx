@@ -9,10 +9,10 @@ const ComingSoonPage: React.FC = () => {
                     <span className="material-symbols-outlined text-4xl text-primary">hourglass_empty</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4">
-                    Próximamente
+                    Roadmap & Futuro 2026
                 </h1>
                 <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-                    Estamos preparando un análisis profundo sobre los hitos que definirán el 2026. Aquí tienes un adelanto de lo que viene.
+                    Análisis estratégico de los hitos regulatorios y tecnológicos confirmados que definirán el ecosistema de IA este año.
                 </p>
             </div>
 

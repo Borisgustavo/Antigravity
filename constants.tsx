@@ -22,7 +22,10 @@ export const NEWS_MOCKS: NewsItem[] = [
     source: 'OpenAI',
     imageUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800',
     publishedAt: '2026-02-05',
-    externalUrl: 'https://openai.com/index/gpt-5-3-codex/'
+    externalUrl: 'https://openai.com/index/gpt-5-3-codex/',
+    content: `OpenAI ha dado un golpe sobre la mesa con GPT-5.3 Codex, una iteración diseñada desde cero para la ingeniería de software autónoma. A diferencia de sus predecesores, que eran generalistas con buenas capacidades de código, Codex 5.3 entiende la arquitectura de sistemas completos, gestiona dependencias complejas y puede refactorizar bases de código legacy con una tasa de error inferior al 2%.
+
+    Las pruebas preliminares muestran que puede actuar como un ingeniero senior en tareas de mantenimiento y como un arquitecto junior en diseño de sistemas. La integración nativa con GitHub Copilot Workspace promete flujos de trabajo donde el humano supervisa y la IA ejecuta la implementación detallada.`
   },
   {
     id: 'deepseek-r1',
@@ -32,7 +35,10 @@ export const NEWS_MOCKS: NewsItem[] = [
     source: 'DeepSeek',
     imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
     publishedAt: '2026-01-20',
-    externalUrl: 'https://www.deepseek.com/'
+    externalUrl: 'https://www.deepseek.com/',
+    content: `La eficiencia es el nuevo "Santo Grial" de la IA, y DeepSeek R1 lo ha demostrado con creces. Este modelo, entrenado con un presupuesto de computación significativamente menor que sus contrapartes occidentales, ha logrado igualar el rendimiento de GPT-4 en tareas de razonamiento matemático y generación de código.
+
+    Su arquitectura "Mixture-of-Experts" (MoE) altamente optimizada permite correr inferencia a una fracción del costo, democratizando el acceso a inteligencia de nivel superior. Esto plantea un serio desafío a los modelos cerrados y caros, sugiriendo un futuro donde la inteligencia de alta calidad sea un commodity accesible para cualquier desarrollador.`
   },
   {
     id: 'google-commerce-protocol',
@@ -42,7 +48,10 @@ export const NEWS_MOCKS: NewsItem[] = [
     source: 'Google',
     imageUrl: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&q=80&w=800',
     publishedAt: '2026-01-15',
-    externalUrl: 'https://blog.google/products/shopping/'
+    externalUrl: 'https://blog.google/products/shopping/',
+    content: `Google está transformando fundamentalmente la búsqueda comercial con su nuevo Universal Commerce Protocol. Ya no se trata solo de encontrar productos, sino de permitir que agentes de IA negocien, comparen y compren en nombre del usuario.
+
+    Este protocolo estandariza la forma en que los agentes interactúan con las tiendas online, eliminando la fricción de los carritos de compra y los formularios de pago. Para los retailers, esto significa que sus inventarios ahora son legibles por máquinas, abriendo un nuevo canal de ventas directo a la IA.`
   },
   {
     id: 'gemini-personal-intelligence',
@@ -52,7 +61,10 @@ export const NEWS_MOCKS: NewsItem[] = [
     source: 'Google',
     imageUrl: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=1200',
     publishedAt: '2026-01-10',
-    externalUrl: 'https://blog.google/products/gemini/'
+    externalUrl: 'https://blog.google/products/gemini/',
+    content: `La prometida integración de "Personal Intelligence" en Gemini finalmente está aquí. Google ha conectado su modelo más potente con el vasto ecosistema de datos personales del usuario: correos, documentos, fotos y videos de YouTube.
+
+    Ahora puedes pedirle a Gemini que "encuentre la factura de la reparación del coche del año pasado y la compare con el presupuesto actual", o que "cree un itinerario de viaje basado en los videos de viajes que he guardado en YouTube". Todo esto ocurre dentro de un enclave seguro donde los datos personales nunca se utilizan para entrenar el modelo general.`
   },
   {
     id: 'snowflake-openai',
@@ -62,7 +74,10 @@ export const NEWS_MOCKS: NewsItem[] = [
     source: 'Snowflake',
     imageUrl: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80&w=800',
     publishedAt: '2026-02-02',
-    externalUrl: 'https://www.snowflake.com/blog/'
+    externalUrl: 'https://www.snowflake.com/blog/',
+    content: `La alianza entre Snowflake y OpenAI marca un hito en la adopción empresarial de la IA. Con una inversión de 200 millones de dólares, ambas compañías buscan resolver el mayor obstáculo para las corporaciones: cómo usar sus datos privados con LLMs potentes sin comprometer la seguridad.
+
+    La integración permitirá ejecutar modelos de OpenAI directamente dentro del perímetro de seguridad de Snowflake Data Cloud. Esto significa que los datos nunca salen de la gobernanza de la empresa, permitiendo aplicaciones de RAG (Retrieval-Augmented Generation) masivas y seguras para finanzas, salud y legal.`
   },
   {
     id: 'chatgpt-ads-go',
@@ -72,7 +87,10 @@ export const NEWS_MOCKS: NewsItem[] = [
     source: 'The Verge',
     imageUrl: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800',
     publishedAt: '2026-01-12',
-    externalUrl: 'https://www.theverge.com/'
+    externalUrl: 'https://www.theverge.com/',
+    content: `En un movimiento que muchos analistas predijeron, OpenAI ha diversificado su modelo de negocio introduciendo el plan "ChatGPT Go" por $8 al mes, y una capa gratuita soportada por publicidad.
+
+    Esta estrategia busca capturar el mercado masivo que encuentra excesivo el precio de $20/mes del plan Plus, pero que necesita más capacidad que la versión gratuita básica. Los anuncios, según OpenAI, serán "no intrusivos y contextualmente relevantes", apareciendo en la barra lateral o como sugerencias patrocinadas al final de las respuestas, similar al modelo de búsqueda tradicional.`
   }
 ];
 
