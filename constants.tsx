@@ -15,82 +15,59 @@ export const NEWS_MOCKS: NewsItem[] = [
     externalUrl: 'https://www.anthropic.com/news'
   },
   {
-    id: 'gpt-5-3-codex',
-    title: 'OpenAI responde con GPT-5.3 Codex: El primer modelo nativo para agentes de código',
-    excerpt: 'Diseñado específicamente para ingeniería de software autónoma, GPT-5.3 Codex promete un 25% más de velocidad y capacidades de depuración automática.',
-    category: 'Modelos',
+    id: 'openai-frontier',
+    title: 'OpenAI lanza "Frontier": Gestión empresarial de agentes de IA',
+    excerpt: 'Nueva plataforma para desplegar y gestionar flujos de trabajo de agentes autónomos en infraestructura empresarial existente.',
+    category: 'Empresas',
     source: 'OpenAI',
     imageUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2026-02-05',
-    externalUrl: 'https://openai.com/index/gpt-5-3-codex/',
-    content: `OpenAI ha dado un golpe sobre la mesa con GPT-5.3 Codex, una iteración diseñada desde cero para la ingeniería de software autónoma. A diferencia de sus predecesores, que eran generalistas con buenas capacidades de código, Codex 5.3 entiende la arquitectura de sistemas completos, gestiona dependencias complejas y puede refactorizar bases de código legacy con una tasa de error inferior al 2%.
-
-    Las pruebas preliminares muestran que puede actuar como un ingeniero senior en tareas de mantenimiento y como un arquitecto junior en diseño de sistemas. La integración nativa con GitHub Copilot Workspace promete flujos de trabajo donde el humano supervisa y la IA ejecuta la implementación detallada.`
+    publishedAt: '2026-02-10',
+    externalUrl: 'https://openai.com/blog',
+    content: 'OpenAI ha presentado Frontier, un servicio diseñado para ayudar a las empresas a integrar y gestionar agentes de IA dentro de sus operaciones. Esta plataforma busca cerrar la brecha entre los modelos de lenguaje y las aplicaciones empresariales reales, permitiendo una orquestación segura y escalable.'
+  },
+  {
+    id: 'google-antigravity-ide',
+    title: 'Google entra al desarrollo nativo con Antigravity IDE',
+    excerpt: 'Un entorno de desarrollo gratuito y potenciado por IA que maneja múltiples tareas de codificación simultáneamente.',
+    category: 'Herramientas',
+    source: 'Google',
+    imageUrl: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-02-12',
+    externalUrl: 'https://blog.google/technology/developers/',
+    content: 'Google desafía a los editores tradicionales con Antigravity IDE. Construido sobre VS Code, este editor integra profundamente a Gemini para ofrecer asistencia de codificación "agentica", capaz de entender el contexto completo del proyecto y realizar refactorizaciones complejas de forma autónoma.'
+  },
+  {
+    id: 'minimax-m2-5',
+    title: 'MiniMax M2.5: Rendimiento de punta a una fracción del costo',
+    excerpt: 'El nuevo modelo chino promete igualar el estado del arte con una eficiencia de costos sorprendente.',
+    category: 'Modelos',
+    source: 'MiniMax',
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-02-15',
+    externalUrl: 'https://www.minimax.io/',
+    content: 'MiniMax ha lanzado sus modelos M2.5 y M2.5 Lightning. Estos modelos destacan por ofrecer un rendimiento comparable a los líderes del mercado pero con una arquitectura optimizada que reduce drásticamente los costos de inferencia, haciéndolos ideales para aplicaciones de alto volumen.'
+  },
+  {
+    id: 'snowflake-openai-partnership',
+    title: 'Snowflake y OpenAI: IA segura para datos empresariales',
+    excerpt: 'Alianza de $200 millones para permitir que los agentes de IA interactúen con datos gobernados de forma nativa.',
+    category: 'Empresas',
+    source: 'Snowflake',
+    imageUrl: 'https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&q=80&w=800',
+    publishedAt: '2026-02-16',
+    externalUrl: 'https://www.snowflake.com/news',
+    content: 'Snowflake y OpenAI han anunciado una asociación estratégica plurianual. El objetivo es integrar los modelos de OpenAI directamente en la Data Cloud de Snowflake, permitiendo a las empresas construir aplicaciones inteligentes que acceden a sus datos más sensibles sin comprometer la seguridad o la privacidad.'
   },
   {
     id: 'deepseek-r1',
-    title: 'DeepSeek R1 sacude la industria: Razonamiento de nivel GPT a una fracción del costo',
-    excerpt: 'El modelo chino demuestra que la eficiencia es el nuevo campo de batalla, igualando el rendimiento de modelos occidentales en matemáticas y código con mucha menos computación.',
+    title: 'DeepSeek R1 sigue impactando con eficiencia extrema',
+    excerpt: 'El modelo continúa siendo un referente en razonamiento matemático y de código eficiente.',
     category: 'Modelos',
     source: 'DeepSeek',
     imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
     publishedAt: '2026-01-20',
     externalUrl: 'https://www.deepseek.com/',
-    content: `La eficiencia es el nuevo "Santo Grial" de la IA, y DeepSeek R1 lo ha demostrado con creces. Este modelo, entrenado con un presupuesto de computación significativamente menor que sus contrapartes occidentales, ha logrado igualar el rendimiento de GPT-4 en tareas de razonamiento matemático y generación de código.
-
-    Su arquitectura "Mixture-of-Experts" (MoE) altamente optimizada permite correr inferencia a una fracción del costo, democratizando el acceso a inteligencia de nivel superior. Esto plantea un serio desafío a los modelos cerrados y caros, sugiriendo un futuro donde la inteligencia de alta calidad sea un commodity accesible para cualquier desarrollador.`
-  },
-  {
-    id: 'google-commerce-protocol',
-    title: 'Google lanza Universal Commerce Protocol para agentes de compras autónomos',
-    excerpt: 'Google transforma la búsqueda en una capa de ejecución para el comercio, permitiendo que agentes de IA completen compras de principio a fin.',
-    category: 'Empresas',
-    source: 'Google',
-    imageUrl: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2026-01-15',
-    externalUrl: 'https://blog.google/products/shopping/',
-    content: `Google está transformando fundamentalmente la búsqueda comercial con su nuevo Universal Commerce Protocol. Ya no se trata solo de encontrar productos, sino de permitir que agentes de IA negocien, comparen y compren en nombre del usuario.
-
-    Este protocolo estandariza la forma en que los agentes interactúan con las tiendas online, eliminando la fricción de los carritos de compra y los formularios de pago. Para los retailers, esto significa que sus inventarios ahora son legibles por máquinas, abriendo un nuevo canal de ventas directo a la IA.`
-  },
-  {
-    id: 'gemini-personal-intelligence',
-    title: 'Gemini ahora se integra profundamente con tus apps de Google (Gmail, Fotos, YouTube)',
-    excerpt: 'Nueva actualización "Personal Intelligence" permite a Gemini conectar puntos entre tus datos personales de forma segura para una asistencia ultra-personalizada.',
-    category: 'Modelos',
-    source: 'Google',
-    imageUrl: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=1200',
-    publishedAt: '2026-01-10',
-    externalUrl: 'https://blog.google/products/gemini/',
-    content: `La prometida integración de "Personal Intelligence" en Gemini finalmente está aquí. Google ha conectado su modelo más potente con el vasto ecosistema de datos personales del usuario: correos, documentos, fotos y videos de YouTube.
-
-    Ahora puedes pedirle a Gemini que "encuentre la factura de la reparación del coche del año pasado y la compare con el presupuesto actual", o que "cree un itinerario de viaje basado en los videos de viajes que he guardado en YouTube". Todo esto ocurre dentro de un enclave seguro donde los datos personales nunca se utilizan para entrenar el modelo general.`
-  },
-  {
-    id: 'snowflake-openai',
-    title: 'Snowflake y OpenAI firman alianza de US$200M para llevar IA a los datos empresariales',
-    excerpt: 'Acuerdo estratégico para integrar modelos de OpenAI directamente en la nube de datos de Snowflake, facilitando la creación de apps corporativas seguras.',
-    category: 'Empresas',
-    source: 'Snowflake',
-    imageUrl: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2026-02-02',
-    externalUrl: 'https://www.snowflake.com/blog/',
-    content: `La alianza entre Snowflake y OpenAI marca un hito en la adopción empresarial de la IA. Con una inversión de 200 millones de dólares, ambas compañías buscan resolver el mayor obstáculo para las corporaciones: cómo usar sus datos privados con LLMs potentes sin comprometer la seguridad.
-
-    La integración permitirá ejecutar modelos de OpenAI directamente dentro del perímetro de seguridad de Snowflake Data Cloud. Esto significa que los datos nunca salen de la gobernanza de la empresa, permitiendo aplicaciones de RAG (Retrieval-Augmented Generation) masivas y seguras para finanzas, salud y legal.`
-  },
-  {
-    id: 'chatgpt-ads-go',
-    title: 'ChatGPT introduce publicidad y nuevo plan "Go" de US$8/mes',
-    excerpt: 'OpenAI diversifica sus ingresos con un nivel intermedio más económico y la introducción de anuncios en los planes gratuitos.',
-    category: 'Empresas',
-    source: 'The Verge',
-    imageUrl: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800',
-    publishedAt: '2026-01-12',
-    externalUrl: 'https://www.theverge.com/',
-    content: `En un movimiento que muchos analistas predijeron, OpenAI ha diversificado su modelo de negocio introduciendo el plan "ChatGPT Go" por $8 al mes, y una capa gratuita soportada por publicidad.
-
-    Esta estrategia busca capturar el mercado masivo que encuentra excesivo el precio de $20/mes del plan Plus, pero que necesita más capacidad que la versión gratuita básica. Los anuncios, según OpenAI, serán "no intrusivos y contextualmente relevantes", apareciendo en la barra lateral o como sugerencias patrocinadas al final de las respuestas, similar al modelo de búsqueda tradicional.`
+    content: 'Aunque lanzado a finales de enero, DeepSeek R1 sigue siendo noticia en febrero por su impacto continuo en la industria, forzando a otros actores a priorizar la eficiencia y los modelos de "razonamiento" accesibles.'
   }
 ];
 
