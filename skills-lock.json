@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "google-ads": {
+      "source": "jdrhyne/agent-skills",
+      "sourceType": "github",
+      "computedHash": "e7f3ca27425d4acdcb0a0ba4b91c852d13f4d30f19c25cbf304c0c7b2cdb1aa6"
+    }
+  }
+}
