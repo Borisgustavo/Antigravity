@@ -97,75 +97,70 @@ const ArticlePage: React.FC = () => {
               )}
             </div>
 
-            {/* Rich, article-specific content */}
-            <div className="flex flex-col gap-8 text-[#334155] dark:text-[#cbd5e1] leading-loose text-lg font-body">
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#111418] dark:text-white mb-4">Introducción: El Auge de la IA Generativa</h2>
-                <p>
-                  La inteligencia artificial generativa ha trascendido las fronteras de la ciencia ficción para convertirse en una realidad palpable que redefine industrias y transforma la interacción humana con la tecnología. Desde la creación de arte y música hasta la redacción de código y la simulación de escenarios complejos, los modelos generativos están demostrando una capacidad sin precedentes para innovar y optimizar procesos.
-                </p>
-                <p>
-                  En este artículo, exploraremos cómo esta tecnología está evolucionando, los desafíos que presenta y las oportunidades que abre para el futuro. Nos centraremos en las implicaciones prácticas y éticas, así como en las tendencias emergentes que marcarán la próxima década.
-                </p>
-              </section>
+            {/* Dynamic article content renderer */}
+            <div className="flex flex-col gap-6 text-[#334155] dark:text-[#cbd5e1] leading-loose text-base font-body">
+              {news.content ? (
+                (() => {
+                  // Parse content: split by blank lines, detect **Title** headers
+                  const blocks = news.content!.split(/\n\n+/).filter(Boolean);
+                  const rendered: React.ReactNode[] = [];
+                  let adInserted = false;
 
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#111418] dark:text-white mb-4">Principales Aplicaciones y Casos de Uso</h2>
-                <p>
-                  La versatilidad de la IA generativa es asombrosa. En el ámbito creativo, herramientas como DALL-E y Midjourney están democratizando la creación visual, permitiendo a usuarios sin experiencia artística generar imágenes complejas a partir de descripciones textuales. En la música, algoritmos como Amper Music pueden componer bandas sonoras originales adaptadas a cualquier estado de ánimo o género.
-                </p>
-                <p>
-                  Más allá del arte, la IA generativa está revolucionando el desarrollo de software, con modelos capaces de escribir y depurar código, acelerando significativamente los ciclos de desarrollo. En la medicina, se utilizan para diseñar nuevas moléculas de fármacos y personalizar tratamientos.
-                </p>
-              </section>
+                  blocks.forEach((block, i) => {
+                    const headerMatch = block.match(/^\*\*(.+?)\*\*/);
+                    if (headerMatch) {
+                      // Section with **Header** + body text
+                      const headerText = headerMatch[1];
+                      const bodyText = block.replace(/^\*\*(.+?)\*\*\n?/, '').trim();
+                      rendered.push(
+                        <section key={i}>
+                          <h2 className="text-xl md:text-2xl font-bold text-[#111418] dark:text-white mb-3 flex items-center gap-2 border-l-4 border-primary pl-3">
+                            {headerText}
+                          </h2>
+                          {bodyText && <p className="text-[#334155] dark:text-[#cbd5e1]">{bodyText}</p>}
+                        </section>
+                      );
+                    } else {
+                      rendered.push(<p key={i}>{block}</p>);
+                    }
 
-              {/* Inline AdSense Unit */}
-              <ins
-                className="adsbygoogle"
-                style={{ display: 'block', textAlign: 'center' }}
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
-                data-ad-client="ca-pub-3167296570500466"
-                data-ad-slot="in-article-fluid"
-              />
-
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#111418] dark:text-white mb-4">Desafíos Éticos y Regulatorios</h2>
-                <p>
-                  A pesar de sus promesas, la IA generativa no está exenta de desafíos. La preocupación por la desinformación, los "deepfakes" y la autoría de contenidos generados por máquinas son temas centrales en el debate ético. La necesidad de marcos regulatorios claros y robustos es cada vez más apremiante para garantizar un desarrollo responsable y proteger a la sociedad de posibles abusos.
-                </p>
-                <p>
-                  La transparencia en los algoritmos y la atribución de la autoría son aspectos cruciales que deben abordarse para fomentar la confianza pública y asegurar que estas tecnologías beneficien a todos.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#111418] dark:text-white mb-4">El Futuro de la Interacción Humano-IA</h2>
-                <p>
-                  Mirando hacia adelante, la IA generativa promete transformar aún más nuestra interacción con el mundo digital y físico. Veremos asistentes personales más sofisticados, experiencias de realidad virtual y aumentada hiperrealistas, y sistemas capaces de aprender y adaptarse a nuestras necesidades de formas que hoy apenas podemos imaginar.
-                </p>
-                <p>
-                  La clave estará en cómo logramos integrar estas capacidades avanzadas de manera que potencien la creatividad humana, mejoren la productividad y resuelvan problemas complejos, sin comprometer los valores fundamentales de nuestra sociedad.
-                </p>
-              </section>
-
-              <div className="bg-blue-50/50 dark:bg-[#1c2632]/50 rounded-xl p-6 border border-blue-100 dark:border-[#283039] shadow-sm relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1 h-full bg-primary"></div>
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                    <span className="material-symbols-outlined">lightbulb</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#111418] dark:text-white">Conclusiones Clave</h3>
-                  </div>
-                </div>
-                <ul className="list-disc list-inside text-[#334155] dark:text-[#cbd5e1] leading-relaxed font-body space-y-2">
-                  <li>La IA generativa está redefiniendo la creatividad y la eficiencia en múltiples sectores.</li>
-                  <li>Existen desafíos éticos y regulatorios significativos que requieren atención urgente.</li>
-                  <li>El futuro promete una integración más profunda de la IA en la vida cotidiana, con un enfoque en la potenciación humana.</li>
-                  <li>La colaboración entre desarrolladores, legisladores y la sociedad es esencial para un desarrollo responsable.</li>
-                </ul>
-              </div>
+                    // Insert inline ad after index 3
+                    if (i === 3 && !adInserted) {
+                      adInserted = true;
+                      rendered.push(
+                        <ins key="adsense-inline"
+                          className="adsbygoogle"
+                          style={{ display: 'block', textAlign: 'center' }}
+                          data-ad-layout="in-article"
+                          data-ad-format="fluid"
+                          data-ad-client="ca-pub-3167296570500466"
+                          data-ad-slot="in-article-fluid"
+                        />
+                      );
+                    }
+                  });
+                  return rendered;
+                })()
+              ) : (
+                <>
+                  <section>
+                    <h2 className="text-xl md:text-2xl font-bold text-[#111418] dark:text-white mb-3 border-l-4 border-primary pl-3">Introducción</h2>
+                    <p>La inteligencia artificial generativa ha trascendido las fronteras de la ciencia ficción para convertirse en una realidad palpable que redefine industrias y transforma la interacción humana con la tecnología.</p>
+                  </section>
+                  <ins
+                    className="adsbygoogle"
+                    style={{ display: 'block', textAlign: 'center' }}
+                    data-ad-layout="in-article"
+                    data-ad-format="fluid"
+                    data-ad-client="ca-pub-3167296570500466"
+                    data-ad-slot="in-article-fluid"
+                  />
+                  <section>
+                    <h2 className="text-xl md:text-2xl font-bold text-[#111418] dark:text-white mb-3 border-l-4 border-primary pl-3">Análisis y Perspectiva</h2>
+                    <p>Las últimas investigaciones confirman que la competencia tecnológica ya no se limita al tamaño de los modelos. La eficiencia computacional, la reducción de costes de inferencia y la capacidad de razonamiento en múltiples pasos son ahora los vectores clave de diferenciación.</p>
+                  </section>
+                </>
+              )}
             </div>
 
             <div className="mt-4 p-8 rounded-2xl bg-[#1c2632] dark:bg-[#0d1218] border border-[#283039] text-center flex flex-col items-center gap-4 relative overflow-hidden">

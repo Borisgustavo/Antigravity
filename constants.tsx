@@ -3,6 +3,39 @@ import { NewsItem, ToolItem, TimelineEvent, DirectoryVoice } from './types';
 
 export const NEWS_MOCKS: NewsItem[] = [
   {
+    id: 'openclaw-plataforma-ia-local',
+    title: 'OpenClaw: La plataforma "local-first" que convierte tu dispositivo en un hub de IA multicanal',
+    excerpt: 'OpenClaw lleva la IA a tus dispositivos con un Gateway propio que gestiona sesiones, herramientas y canales de chat (WhatsApp, Telegram, Slack, Discord y más) desde tu propio hardware.',
+    content: `OpenClaw es una plataforma diseñada para quienes quieren operar un asistente de IA desde sus propios dispositivos, sin depender de la nube. Su arquitectura "local-first" se basa en un Gateway que actúa como plano de control: administra sesiones, canales, herramientas, eventos y expone una Control UI, WebChat y Dashboard accesibles desde el propio dispositivo.
+
+**Gateway local: el centro de control**
+El Gateway de OpenClaw es el núcleo de la plataforma. Desde él se administran sesiones, canales de comunicación, herramientas disponibles y eventos del sistema. Expone una interfaz de control (Control UI), un WebChat integrado y un Dashboard de métricas, todo funcionando en local.
+
+**Bandeja multi-canal: responde donde tú ya chateas**
+OpenClaw integra los principales canales de mensajería: WhatsApp, Telegram, Slack, Discord, Google Chat, Signal y Microsoft Teams. Además soporta extensiones como Matrix, Zalo, WebChat y apps para macOS, iOS y Android. La promesa es que puedes usar tu asistente de IA en la app donde ya tienes tu conversación, sin abrir otra interfaz.
+
+**Enrutamiento multi-agente**
+Una funcionalidad diferenciadora es la posibilidad de rutear canales, cuentas o peers a agentes aislados mediante workspaces y sesiones por agente. Esto permite separar contextos de manera limpia: por ejemplo, tener un agente para "trabajo" y otro para uso "personal", cada uno con su historial y configuración propios.
+
+**Herramientas "first-class" y automatización**
+OpenClaw trae herramientas integradas de primera clase: browser (navegador controlado por la IA), canvas, nodes (acciones del dispositivo), cron (tareas programadas), sessions y acciones específicas para canales como Discord o Slack. La automatización se puede disparar mediante cron/wakeups, webhooks o eventos como Gmail Pub/Sub.
+
+**Skills (extensiones) y ClawHub**
+La plataforma soporta un sistema de skills (bundled/managed/workspace) y un registry llamado ClawHub para descubrir e instalar skills adicionales cuando está habilitado. Es el equivalente a una "app store" de capacidades para tu asistente local.
+
+**Voz y apps complementarias**
+Para los que quieren ir más allá del texto, OpenClaw ofrece Voice Wake y Talk Mode (con integración de ElevenLabs) y apps complementarias que habilitan notificaciones, uso de cámara y screen recording según los permisos concedidos.
+
+**Seguridad por defecto**
+OpenClaw aplica un modelo de seguridad restrictivo: en varios canales el comportamiento predeterminado es DM pairing (dmPolicy="pairing"), lo que significa que desconocidos no pueden ejecutar acciones en tu asistente por defecto. La plataforma incluye una guía de auditoría de seguridad para revisar exposición de red, permisos de archivos, plugins y skills instalados.`,
+    category: 'Herramientas',
+    source: 'OpenClaw',
+    imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200',
+    publishedAt: '2026-02-28',
+    isFeatured: true,
+    externalUrl: 'https://github.com/openclaw'
+  },
+  {
     id: 'claude-opus-4-6',
     title: 'Anthropic lanza Claude Opus 4.6 con "Agent Teams" y contexto de 1M',
     excerpt: 'Nueva versión insignia con 1 millón de tokens de contexto, capacidad de codificación superior y orquestación de equipos de agentes.',
@@ -11,7 +44,6 @@ export const NEWS_MOCKS: NewsItem[] = [
     source: 'Anthropic',
     imageUrl: 'https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&q=80&w=1200',
     publishedAt: '2026-02-05',
-    isFeatured: true,
     externalUrl: 'https://www.anthropic.com/news'
   },
   {
@@ -99,7 +131,7 @@ export const TIMELINE_MOCKS: TimelineEvent[] = [
     title: 'Fundamentos y Sueños',
     description: 'Se sientan las bases matemáticas. Alan Turing propone el "Juego de Imitación" (1950) cuestionando si las máquinas pueden pensar. La inteligencia se evalúa por comportamiento observable.',
     category: 'Nacimiento',
-    imageUrl: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
     icon: 'history'
   },
   {
@@ -108,7 +140,7 @@ export const TIMELINE_MOCKS: TimelineEvent[] = [
     title: 'IA Simbólica y Optimismo',
     description: 'El Dartmouth Workshop (1956) acuña el término AI. Dominio del enfoque simbólico: reglas lógicas "SI-ENTONCES". Éxitos en ajedrez temprano y teoremas, pero choque con la ambigüedad del mundo real.',
     category: 'Optimismo',
-    imageUrl: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=800',
     icon: 'account_tree'
   },
   {
@@ -117,7 +149,7 @@ export const TIMELINE_MOCKS: TimelineEvent[] = [
     title: 'Primer "Invierno" de la IA',
     description: 'Caída de financiamiento por promesas no cumplidas en traducción automática y robótica. El informe Lighthill recomienda recortar fondos ante la excesiva complejidad del mundo real para la época.',
     category: 'Invierno',
-    imageUrl: 'https://images.unsplash.com/photo-1603732551658-5fabbaff8453?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://images.unsplash.com/photo-1491002052546-bf38f186af56?auto=format&fit=crop&q=80&w=800',
     icon: 'ac_unit'
   },
   {
@@ -126,7 +158,7 @@ export const TIMELINE_MOCKS: TimelineEvent[] = [
     title: 'Sistemas Expertos',
     description: 'Renacimiento práctico. Programas basados en bases de conocimiento para diagnósticos médicos y fallas industriales. Éxito empresarial pero difícil de escalar por la fragilidad de las reglas manuales.',
     category: 'Empresarial',
-    imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=800',
     icon: 'groups'
   },
   {
@@ -135,7 +167,7 @@ export const TIMELINE_MOCKS: TimelineEvent[] = [
     title: '2º Invierno + Giro Estadístico',
     description: 'Transición de "programar reglas" a "aprender de datos". Aparece Backpropagation (1986). Los modelos probabilísticos y SVM dominan el Machine Learning temprano antes de la era Deep.',
     category: 'Invierno',
-    imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&q=80&w=800',
     icon: 'query_stats'
   },
   {
@@ -144,7 +176,7 @@ export const TIMELINE_MOCKS: TimelineEvent[] = [
     title: 'Deep Learning Despega',
     description: 'Convergencia de GPUs potentes y Big Data. AlexNet (2012) revoluciona la visión. AlphaGo (2016) vence al campeón mundial de Go, demostrando el poder del aprendizaje por refuerzo profundo.',
     category: 'Explosión',
-    imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4628c9757?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800',
     icon: 'model_training'
   },
   {
@@ -162,7 +194,7 @@ export const TIMELINE_MOCKS: TimelineEvent[] = [
     title: 'IA Generativa para Todos',
     description: 'La IA pasa de predecir a crear: chat, imagen, video. ChatGPT democratiza el acceso. Integración multimodal y agentes autónomos. Inicio de la regulación global a gran escala.',
     category: 'Actualidad',
-    imageUrl: 'https://images.unsplash.com/photo-1678382156212-f1400266850d?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&q=80&w=800',
     icon: 'auto_awesome'
   }
 ];

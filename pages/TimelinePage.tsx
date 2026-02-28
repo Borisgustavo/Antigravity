@@ -7,14 +7,14 @@ const TimelinePage: React.FC = () => {
     <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col">
       <main className="flex flex-col flex-1">
         {/* Hero Header */}
-        <section className="relative w-full py-12 sm:py-24 px-4 sm:px-10 flex flex-col items-center justify-center bg-cover bg-center overflow-hidden" style={{backgroundImage: 'linear-gradient(to bottom, rgba(16, 25, 34, 0.9), rgba(16, 25, 34, 1)), url("https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=1200")'}}>
+        <section className="relative w-full py-12 sm:py-24 px-4 sm:px-10 flex flex-col items-center justify-center bg-cover bg-center overflow-hidden" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(16, 25, 34, 0.9), rgba(16, 25, 34, 1)), url("https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=1200")' }}>
           <div className="max-w-4xl w-full text-center z-10 flex flex-col gap-6">
             <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary w-fit mx-auto">
               <span className="material-symbols-outlined text-[18px]">history</span>
               <span className="text-xs font-bold uppercase tracking-wide">Línea de Tiempo 1945-2025</span>
             </div>
             <h1 className="text-4xl sm:text-6xl font-black text-white leading-tight tracking-tight font-display">
-              80 Años de <br/>
+              80 Años de <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-300">Inteligencia Artificial</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed font-body">Un recorrido por los hitos, los "inviernos" y los saltos tecnológicos que nos trajeron a la era de la IA generativa.</p>
@@ -26,7 +26,7 @@ const TimelinePage: React.FC = () => {
           <div className="max-w-[1000px] mx-auto relative">
             {/* The actual line behind events */}
             <div className="absolute left-[20px] top-0 bottom-0 w-1 bg-gray-200 dark:bg-[#283039] z-0 hidden sm:block"></div>
-            
+
             {/* Events Loop */}
             <div className="flex flex-col gap-12">
               {TIMELINE_MOCKS.map((event, index) => {
@@ -44,13 +44,16 @@ const TimelinePage: React.FC = () => {
                     <div className="bg-white dark:bg-[#1c2127] border border-gray-200 dark:border-[#283039] rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-sm group-hover:shadow-xl transform group-hover:-translate-y-1">
                       <div className="flex flex-col md:flex-row h-full">
                         {/* Image Container with fix for absolute positioning */}
-                        <div className="relative w-full md:w-64 h-48 md:h-auto bg-cover bg-center shrink-0" style={{backgroundImage: `url("${event.imageUrl}")`}}>
+                        <div
+                          className="relative w-full md:w-64 h-52 md:h-full md:min-h-[220px] bg-cover bg-center shrink-0"
+                          style={{ backgroundImage: `url("${event.imageUrl}")` }}
+                        >
                           {isWinter && (
                             <div className="absolute inset-0 bg-blue-900/40 mix-blend-multiply backdrop-blur-[1px]"></div>
                           )}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden"></div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:bg-gradient-to-r md:from-transparent md:to-black/10"></div>
                         </div>
-                        
+
                         <div className="p-6 flex flex-col flex-1">
                           <div className="flex items-center justify-between mb-3">
                             <span className={`text-sm font-black tracking-tighter ${isWinter ? 'text-blue-400' : 'text-primary'}`}>{event.date}</span>
@@ -81,7 +84,7 @@ const TimelinePage: React.FC = () => {
                 <div className="flex-1 flex flex-col gap-4">
                   <h3 className="text-3xl font-bold text-gray-900 dark:text-white font-display">La Constante de la IA</h3>
                   <p className="text-gray-600 dark:text-[#9dabb9] text-lg leading-relaxed">
-                    La historia de la IA se repite en ciclos. Cada renacimiento ocurre cuando tres factores convergen en escala brutal: 
+                    La historia de la IA se repite en ciclos. Cada renacimiento ocurre cuando tres factores convergen en escala brutal:
                     <span className="text-primary font-bold"> Algoritmos + Datos + Hardware</span>.
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
