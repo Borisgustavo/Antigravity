@@ -166,11 +166,18 @@ const ArticlePage: React.FC = () => {
             <div className="mt-4 p-8 rounded-2xl bg-[#1c2632] dark:bg-[#0d1218] border border-[#283039] text-center flex flex-col items-center gap-4 relative overflow-hidden">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
               <h3 className="text-2xl font-bold text-white relative z-10">¿Quieres profundizar más?</h3>
-              <p className="text-[#9dabb9] relative z-10 max-w-md">Accede al reporte técnico completo y los benchmarks realizados por el equipo de AHORALAIA.</p>
-              <button className="mt-2 relative z-10 group inline-flex items-center justify-center gap-3 bg-primary hover:bg-blue-600 text-white text-lg font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 w-full sm:w-auto transform hover:-translate-y-0.5">
-                <span>Leer Fuente Original</span>
-                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_outward</span>
-              </button>
+              <p className="text-[#9dabb9] relative z-10 max-w-md">Accede al reporte técnico completo y los recursos publicados por la fuente original.</p>
+              {(news.externalUrl) && (
+                <a
+                  href={news.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 relative z-10 group inline-flex items-center justify-center gap-3 bg-primary hover:bg-blue-600 text-white text-lg font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 w-full sm:w-auto transform hover:-translate-y-0.5"
+                >
+                  <span>Leer Fuente Original</span>
+                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                </a>
+              )}
             </div>
           </div>
 

@@ -107,6 +107,70 @@ const DirectoryPage: React.FC = () => {
             </div>
           </div>
 
+          {/* Editorial Intro Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2 bg-white dark:bg-[#1c2229] border border-gray-200 dark:border-[#283039] rounded-2xl p-7 shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-primary/10 rounded-xl border border-primary/20">
+                  <span className="material-symbols-outlined text-primary">hub</span>
+                </div>
+                <h2 className="text-xl font-black text-gray-900 dark:text-white font-display">¿Cómo seguir la IA de forma inteligente?</h2>
+              </div>
+              <div className="flex flex-col gap-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p>
+                  El ecosistema de inteligencia artificial genera <strong className="text-gray-900 dark:text-white">más de 500 publicaciones académicas por semana</strong> y docenas de lanzamientos de herramientas. Seguir todo es imposible; saber qué seguir, es una habilidad.
+                </p>
+                <p>
+                  Este hub está diseñado para resolver ese problema. Aquí encontrarás los <strong className="text-gray-900 dark:text-white">divulgadores más confiables en español</strong> —personas que filtran el ruido y explican con rigor— junto con las fuentes primarias (laboratorios, papers, leaderboards) para ir a la raíz cuando necesitas profundidad.
+                </p>
+              </div>
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { icon: 'filter_alt', color: 'text-blue-400', title: 'Filtra por propósito', desc: 'Usa "Divulgadores" para aprender y "Fuentes Oficiales" para verificar datos técnicos.' },
+                  { icon: 'notifications_active', color: 'text-amber-400', title: 'Sigue 2-3 canales máximo', desc: 'La calidad supera a la cantidad. Elige los que más se ajusten a tu nivel actual.' },
+                  { icon: 'article', color: 'text-emerald-400', title: 'Lee los papers originales', desc: 'Los anuncios son marketing. El paper es la fuente primaria. Aprende a leer abstracts.' },
+                  { icon: 'groups', color: 'text-purple-400', title: 'Únete a comunidades', desc: 'Los canales de Discord de Hugging Face, LangChain y los propios divulgadores son clave.' },
+                ].map((tip, i) => (
+                  <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-gray-50 dark:bg-[#151a21] border border-gray-100 dark:border-[#283039]">
+                    <span className={`material-symbols-outlined ${tip.color} mt-0.5 shrink-0`}>{tip.icon}</span>
+                    <div>
+                      <p className="text-xs font-bold text-gray-900 dark:text-white mb-1">{tip.title}</p>
+                      <p className="text-[11px] text-gray-500 leading-relaxed">{tip.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <div className="bg-white dark:bg-[#1c2229] border border-gray-200 dark:border-[#283039] rounded-2xl p-6 shadow-sm flex flex-col gap-4">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary">fact_check</span>
+                  <h3 className="font-black text-gray-900 dark:text-white text-sm">Criterio de inclusión</h3>
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  Los divulgadores y fuentes en este directorio cumplen con criterios de <strong className="text-gray-700 dark:text-gray-300">rigor técnico, frecuencia de actualización y trayectoria verificable</strong>. No incluimos canales de entretenimiento disfrazado de análisis.
+                </p>
+                <div className="flex flex-col gap-2 mt-2">
+                  {['Rigor técnico verificado', 'Actualización frecuente (semanal)', 'Fuente primaria citada', 'Sin sesgo de producto'].map((c, i) => (
+                    <div key={i} className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
+                      <span className="material-symbols-outlined text-emerald-400 text-[16px]">check_circle</span>
+                      {c}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 flex flex-col gap-3">
+                <span className="material-symbols-outlined text-primary text-2xl">volunteer_activism</span>
+                <h3 className="font-black text-gray-900 dark:text-white text-sm">¿Conoces un recurso valioso?</h3>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  Si identificas un divulgador o fuente de alta calidad que no está en el directorio, puedes sugerirlo a través del formulario de contacto al final de esta página.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Navigation Tabs */}
           <div className="flex border-b border-gray-200 dark:border-gray-800">
             <button

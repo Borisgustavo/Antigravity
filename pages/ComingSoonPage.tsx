@@ -95,6 +95,75 @@ const ComingSoonPage: React.FC = () => {
                 </div>
             </div>
 
+            {/* Why This Roadmap Matters */}
+            <div className="max-w-4xl w-full mb-12 animate-in fade-in duration-700 delay-400">
+                <div className="flex items-center gap-3 mb-6 justify-center">
+                    <div className="p-2 bg-primary/10 rounded-xl border border-primary/20">
+                        <span className="material-symbols-outlined text-primary">analytics</span>
+                    </div>
+                    <h2 className="text-2xl font-black text-gray-900 dark:text-white font-display">¿Por qué importa este roadmap?</h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+                    {[
+                        {
+                            icon: 'gavel',
+                            color: 'text-indigo-400',
+                            bg: 'border-indigo-500/30',
+                            title: 'La regulación ya no es teoría',
+                            text: 'El AI Act europeo pasa a plena aplicación el 2 de agosto de 2026. Esto significa multas de hasta el 3% del volumen de negocio para incumplimientos en sistemas de riesgo alto. Las empresas que no hayan iniciado su adaptación enfrentarán consecuencias reales.'
+                        },
+                        {
+                            icon: 'memory',
+                            color: 'text-green-400',
+                            bg: 'border-green-500/30',
+                            title: 'El hardware define el techo',
+                            text: 'La plataforma NVIDIA Vera Rubin reducirá el costo por inferencia de prompts de contexto masivo (millones de tokens). Esto no es una mejora incremental: hace económicamente viables nuevas categorías de productos inteligentes que hoy son inaccesibles.'
+                        },
+                        {
+                            icon: 'psychology',
+                            color: 'text-blue-400',
+                            bg: 'border-blue-500/30',
+                            title: 'Los modelos se especializan',
+                            text: 'Meta apuesta por modelos especializados: Mango para imagen/video y Avocado para código. Esta tendencia marca el fin de los "modelos generales para todo" y el inicio de la era de los foundation models con propósito específico y mejor rendimiento.'
+                        }
+                    ].map((item, i) => (
+                        <div key={i} className={`bg-white dark:bg-[#1c2229] border ${item.bg} rounded-2xl p-6 flex flex-col gap-4`}>
+                            <span className={`material-symbols-outlined ${item.color} text-2xl`}>{item.icon}</span>
+                            <h3 className={`font-bold ${item.color} text-base leading-snug`}>{item.title}</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{item.text}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Glossary Section */}
+            <div className="max-w-4xl w-full mb-14 animate-in fade-in duration-700 delay-500">
+                <div className="flex items-center gap-3 mb-6 justify-center">
+                    <div className="p-2 bg-amber-500/10 rounded-xl border border-amber-500/20">
+                        <span className="material-symbols-outlined text-amber-400">menu_book</span>
+                    </div>
+                    <h2 className="text-2xl font-black text-gray-900 dark:text-white font-display">Glosario de Términos Clave</h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[
+                        { term: 'EU AI Act', def: 'Reglamento (UE) 2024/1689. Primera ley de IA a gran escala en el mundo, que clasifica sistemas por nivel de riesgo y establece obligaciones progresivas de cumplimiento.' },
+                        { term: 'GPAI (General Purpose AI)', def: 'Modelos de IA de uso general como GPT o Gemini. Bajo el AI Act, los GPAI de impacto sistémico como GPT-4 tienen obligaciones adicionales de transparencia y seguridad.' },
+                        { term: 'NVIDIA Vera Rubin (CPX)', def: 'Plataforma de nueva generación de NVIDIA, sucesora de Blackwell. Optimizada para inferencia de contextos masivos (millones de tokens), enfocada en reducir el costo por respuesta en agentes complejos.' },
+                        { term: 'Inferencia de contexto masivo', def: 'Capacidad de un modelo de procesar y razonar sobre millones de tokens de texto en una sola solicitud. Permite analizar documentos completos, bases de código enteras o sesiones largas de agentes.' },
+                        { term: 'Meta Mango', def: 'Nombre en código del próximo modelo de Meta para imagen y video generativo. Se espera su lanzamiento en el primer semestre de 2026, compitiendo directamente con Sora y Runway.' },
+                        { term: 'Meta Avocado', def: 'Nombre en código del próximo modelo de Meta especializado en código y texto técnico. Diseñado para competir con Claude 3.7 Sonnet y o3 en benchmarks de programación (SWE-bench).' },
+                    ].map((item, i) => (
+                        <div key={i} className="bg-white dark:bg-[#1c2229] border border-gray-200 dark:border-[#283039] rounded-xl p-5 flex gap-4 items-start">
+                            <div className="shrink-0 bg-primary/10 text-primary px-2 py-1 rounded-lg text-xs font-black border border-primary/20 mt-0.5">TÉRMINO</div>
+                            <div>
+                                <p className="font-bold text-gray-900 dark:text-white text-sm mb-1">{item.term}</p>
+                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{item.def}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
             <Link
                 to="/"
                 className="px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-blue-600 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
@@ -102,6 +171,7 @@ const ComingSoonPage: React.FC = () => {
                 <span className="material-symbols-outlined">arrow_back</span>
                 Volver al Inicio
             </Link>
+
         </div>
     );
 };

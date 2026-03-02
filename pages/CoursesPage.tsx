@@ -198,6 +198,110 @@ const CoursesPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Editorial Content Section */}
+      <section className="bg-white dark:bg-[#0b0f14] border-b border-gray-100 dark:border-gray-800">
+        <div className="max-w-[1200px] mx-auto py-14 px-4 md:px-10">
+
+          {/* Why Learn AI in 2026 */}
+          <div className="flex flex-col lg:flex-row gap-12 mb-14">
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2 bg-blue-500/10 rounded-xl border border-blue-500/20">
+                  <span className="material-symbols-outlined text-blue-400">trending_up</span>
+                </div>
+                <h2 className="text-2xl font-black text-gray-900 dark:text-white font-display">¿Por qué aprender IA en 2026?</h2>
+              </div>
+              <div className="flex flex-col gap-4 text-gray-600 dark:text-gray-400 leading-relaxed text-base font-body">
+                <p>
+                  El mercado laboral está en plena transición. Según el Foro Económico Mundial, la inteligencia artificial redefinirá el <strong className="text-gray-900 dark:text-white">85% de los roles profesionales antes de 2027</strong>. No se trata de reemplazar humanos, sino de amplificar capacidades: quienes entiendan y dominen las herramientas de IA tendrán una ventaja competitiva difícil de alcanzar para quienes no.
+                </p>
+                <p>
+                  En 2026, la demanda de profesionales con competencias en IA generativa, RAG (Retrieval-Augmented Generation) y LLMOps supera con creces la oferta de talento disponible. Las empresas tecnológicas están pagando hasta un <strong className="text-gray-900 dark:text-white">40% más</strong> a profesionales que integran IA en sus flujos de trabajo, independientemente de su área de especialización.
+                </p>
+                <p>
+                  La barrera de entrada nunca fue tan baja. Con plataformas como Coursera, DeepLearning.AI y Udemy, cualquier persona puede adquirir habilidades sólidas en semanas, no años. El verdadero reto ya no es el acceso a la información, sino <strong className="text-gray-900 dark:text-white">saber qué aprender y en qué orden</strong>.
+                </p>
+              </div>
+            </div>
+
+            {/* Sidebar Stats */}
+            <div className="lg:w-72 shrink-0 flex flex-col gap-4">
+              {[
+                { icon: 'groups', color: 'text-blue-400', bg: 'bg-blue-500/10 border-blue-500/20', label: 'Empleos en IA creados', value: '+2.4M', desc: 'Proyección global 2026-2027' },
+                { icon: 'attach_money', color: 'text-emerald-400', bg: 'bg-emerald-500/10 border-emerald-500/20', label: 'Salario promedio IA Engineer', value: '$145K', desc: 'Media EE.UU. anual (Levels.fyi)' },
+                { icon: 'school', color: 'text-purple-400', bg: 'bg-purple-500/10 border-purple-500/20', label: 'Horas para rol junior IA', value: '~200h', desc: 'Con cursos estructurados' },
+              ].map((stat, i) => (
+                <div key={i} className={`p-4 rounded-2xl border ${stat.bg} flex items-center gap-4`}>
+                  <span className={`material-symbols-outlined ${stat.color} text-3xl`}>{stat.icon}</span>
+                  <div>
+                    <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">{stat.label}</p>
+                    <p className={`text-2xl font-black ${stat.color}`}>{stat.value}</p>
+                    <p className="text-[10px] text-gray-500 italic mt-0.5">{stat.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* How to Choose a Course */}
+          <div className="mb-14">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 bg-amber-500/10 rounded-xl border border-amber-500/20">
+                <span className="material-symbols-outlined text-amber-400">checklist</span>
+              </div>
+              <h2 className="text-2xl font-black text-gray-900 dark:text-white font-display">Cómo elegir el curso correcto para ti</h2>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-3xl">
+              No todos los cursos son iguales. Antes de invertir tiempo y dinero, te recomendamos evaluar estos criterios clave para encontrar el que mejor se adapte a tu perfil y objetivos profesionales.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {[
+                { icon: 'verified', color: 'text-blue-400', title: 'Acreditación y Certificado', desc: 'Prioriza cursos de instituciones reconocidas (Google, DeepLearning.AI, universidades top). Un certificado de Coursera en conjunto con una universidad tiene mayor peso en el mercado laboral.' },
+                { icon: 'timer', color: 'text-emerald-400', title: 'Tiempo vs. Profundidad', desc: 'Un curso de 10 horas te dará herramientas inmediatas. Una especialización de 3 meses te dará una base sólida. Define si necesitas velocidad o profundidad según tu contexto actual.' },
+                { icon: 'code', color: 'text-purple-400', title: 'Enfoque Práctico (Hands-on)', desc: 'Los mejores cursos incluyen proyectos reales, notebooks de Jupyter y acceso a APIs. Evita los que son exclusivamente teóricos sin proyectos para tu portafolio.' },
+                { icon: 'people', color: 'text-amber-400', title: 'Comunidad Activa', desc: 'Una comunidad activa (foros, Discord, GitHub) multiplica el aprendizaje. Valora el número de estudiantes y la actividad reciente en discusiones del curso.' },
+                { icon: 'update', color: 'text-red-400', title: 'Actualización del Contenido', desc: 'En IA, un curso de hace 2 años puede estar desactualizado. Verifica la fecha de última actualización y si incluye modelos recientes (GPT-4, Claude 3, Gemini).' },
+                { icon: 'payments', color: 'text-cyan-400', title: 'Relación Precio-Valor', desc: 'Udemy tiene ventas frecuentes donde $200 cursos bajan a $15. Coursera ofrece auditoría gratuita. Nunca pagues precio completo sin buscar un cupón antes.' },
+              ].map((item, i) => (
+                <div key={i} className="bg-gray-50 dark:bg-[#1c2229] border border-gray-200 dark:border-[#283039] rounded-2xl p-5 flex flex-col gap-3">
+                  <div className="flex items-center gap-3">
+                    <span className={`material-symbols-outlined ${item.color}`}>{item.icon}</span>
+                    <h3 className="font-bold text-gray-900 dark:text-white text-sm">{item.title}</h3>
+                  </div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* AHORALAIA Methodology */}
+          <div className="bg-gradient-to-br from-primary/5 to-blue-500/5 border border-primary/20 rounded-3xl p-8">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="material-symbols-outlined text-primary text-3xl">fact_check</span>
+              <h2 className="text-xl font-black text-gray-900 dark:text-white font-display">Metodología de Selección de AHORALAIA</h2>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 max-w-3xl">
+              Los cursos que encontrarás en esta página no son el resultado de una sugerencia algorítmica ni de acuerdos comerciales. Seguimos un proceso de curación editorial activo con los siguientes criterios:
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { step: '01', title: 'Verificación del instructor', desc: 'Credenciales reales en la industria o investigación académica.' },
+                { step: '02', title: 'Revisión del temario', desc: 'El syllabus cubre tecnologías relevantes y actualizadas a 2025-2026.' },
+                { step: '03', title: 'Análisis de valoraciones', desc: 'Solo cursos con +4.5 estrellas y al menos 500 reseñas verificadas.' },
+                { step: '04', title: 'Prueba práctica', desc: 'Al menos un miembro del equipo completa el curso antes de recomendarlo.' },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col gap-2">
+                  <span className="text-3xl font-black text-primary/30 font-mono">{item.step}</span>
+                  <h4 className="text-sm font-bold text-gray-900 dark:text-white">{item.title}</h4>
+                  <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <main className="max-w-[1400px] mx-auto py-16 px-4 md:px-10">
         <div className="flex flex-col lg:flex-row gap-12">
 
