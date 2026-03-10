@@ -375,10 +375,10 @@ const HomePage: React.FC = () => {
               </button>
             ))}
             <Link
-              to="/proximamente"
+              to="/reporte-2026"
               className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-gray-200 dark:border-transparent bg-white dark:bg-[#283039] px-5 transition-all focus:ring-2 focus:ring-primary text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-[#3d4650]"
             >
-              <span className="text-sm font-medium">Próximamente</span>
+              <span className="text-sm font-medium">Roadmap 2026</span>
             </Link>
           </div>
         </div>

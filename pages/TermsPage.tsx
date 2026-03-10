@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const TermsPage: React.FC = () => {
+    useEffect(() => {
+        const meta = document.createElement('meta');
+        meta.name = "robots";
+        meta.content = "noindex";
+        document.head.appendChild(meta);
+        return () => {
+            document.head.removeChild(meta);
+        };
+    }, []);
     const sections = [
         {
             title: "1. Aceptación de los Términos",

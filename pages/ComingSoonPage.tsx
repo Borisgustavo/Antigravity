@@ -6,7 +6,7 @@ const ComingSoonPage: React.FC = () => {
         <div className="layout-container flex flex-col items-center py-12 px-4 md:px-10">
             <div className="flex flex-col items-center text-center mb-12 animate-in slide-in-from-top duration-700">
                 <div className="bg-primary/10 p-4 rounded-full mb-4">
-                    <span className="material-symbols-outlined text-4xl text-primary">hourglass_empty</span>
+                    <span className="material-symbols-outlined text-4xl text-primary">analytics</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4">
                     Roadmap & Futuro 2026
