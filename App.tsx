@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ArticlePage from './pages/ArticlePage';
 import TimelinePage from './pages/TimelinePage';
@@ -22,7 +22,7 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
@@ -40,7 +40,7 @@ const App: React.FC = () => {
         <Footer />
         <CookieConsent />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 

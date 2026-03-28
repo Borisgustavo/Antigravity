@@ -3,6 +3,29 @@ import { NewsItem, ToolItem, TimelineEvent, DirectoryVoice } from './types';
 
 export const NEWS_MOCKS: NewsItem[] = [
   {
+    id: 'gemini-3-1-pro-flash-lite',
+    title: 'Noticias sobre IA mas Relevantes de Marzo 2026: Google lanza Gemini 3.1 Pro',
+    excerpt: 'Google sorprende en marzo con el lanzamiento de Gemini 3.1 Pro y Flash-Lite, modelos ultra eficientes con una ventana de contexto de 2 millones de tokens.',
+    content: 'A principios de marzo de 2026, Google ha revolucionado de nuevo el panorama de la Inteligencia Artificial con el gran lanzamiento de Gemini 3.1 Pro y su versión ligera, Gemini 3.1 Flash-Lite. Estos modelos destacan por su asombrosa eficiencia, capacidades mejoradas de razonamiento matemático y una ventana de contexto ampliada de hasta 2 millones de tokens. Esta actualización marca una clara respuesta en la carrera armamentística de la IA por ofrecer contexto masivo a bajo costo. Por otro lado, la tendencia general es el claro cambio desde "chatbots pasivos" a "agentes de IA autónomos".',
+    category: 'Modelos',
+    source: 'Google',
+    imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200',
+    publishedAt: '2026-03-15',
+    isFeatured: true,
+    externalUrl: 'https://blog.google/technology/ai/'
+  },
+  {
+    id: 'openai-gpt-5-4-oss',
+    title: 'OpenAI responde con GPT-5.4 y el nuevo modelo Open Source "gpt-oss"',
+    excerpt: 'OpenAI responde en marzo presentando GPT-5.4 para programación avanzada y "gpt-oss", volviendo al mercado de código abierto para agentes.',
+    content: 'Marzo de 2026 sigue siendo un mes agitado para la industria. OpenAI no se quedó atrás y lanzó GPT-5.4, optimizado específicamente para el razonamiento paso a paso, codificación avanzada y eficiencia de costos para desarrolladores. Sorpresivamente, la compañía también lanzó "gpt-oss", su primer modelo de código abierto en siete años bajo licencia Apache 2.0. Con esto, la batalla entre modelos propietarios robustos y alternativas abiertas sigue aumentando su nivel de competitividad durante este mes de marzo.',
+    category: 'Empresas',
+    source: 'OpenAI',
+    imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200',
+    publishedAt: '2026-03-10',
+    externalUrl: 'https://openai.com/'
+  },
+  {
     id: 'openclaw-plataforma-ia-local',
     title: 'OpenClaw: La plataforma "local-first" que convierte tu dispositivo en un hub de IA multicanal',
     excerpt: 'OpenClaw lleva la IA a tus dispositivos con un Gateway propio que gestiona sesiones, herramientas y canales de chat (WhatsApp, Telegram, Slack, Discord y más) desde tu propio hardware.',
@@ -32,7 +55,6 @@ OpenClaw aplica un modelo de seguridad restrictivo: en varios canales el comport
     source: 'OpenClaw',
     imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200',
     publishedAt: '2026-02-28',
-    isFeatured: true,
     externalUrl: 'https://github.com/openclaw'
   },
   {
